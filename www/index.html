@@ -22,53 +22,161 @@
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     <script src="js/dataService.js"></script>
-</head>
-<body ng-app="starter" ng-controller="movieController">
+  </head>
+  <body ng-app="starter" ng-controller="movieController">
+>>>>>>> Movies HTML page partially designed
 
 <ion-pane>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+    </ion-header-bar>
 
-    <div class="container">
+    <ion-content>
+        
+        <div class="container">
 
-        <div class="top-header row">
-            <div class="col-50">
-                <section class="logo">
+            <div class="top-header row">
+                <div class="col-50">
+                    <section class="logo">
 
-                </section>
+                    </section>
 
-                <section class="section-title"><p>Movies</p></section>
+                    <section class="section-title">
 
+                    </section>
+
+                </div>
+                <div class="col-50">
+
+                    <div class="search-box"></div>
+
+                </div>
             </div>
-            <div class="col-50">
 
-                <div class="search-box"></div>
-
-            </div>
-        </div>
-
-        <div class="inner">
             <div class="filter-box">
                 <section class="filter-wrapper">
                     <button>Upcoming</button>
                     <button>New Releases</button>
-                    <button>Movies A-Z</button>
+                    <button>A-Z</button>
                 </section>
             </div>
+
+
             <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container">
-                <div class="data-box" ng-repeat="movie in dataService.upcoming_movies">
-                    <section class="data-date"><p>{{movie.release_date.toString("MMMM yyyy");}}</p></section>
-                    <section class="data-image" style="background-image: url({{IMG_URL+movie.poster_path}})"></section>
-                    <p class="data-title">{{movie.title}}</p>
-                </div>
+
+
+                <section class="data-box" ng-repeat="movie in dataService.upcoming_movies">
+                    {{movie.title}}<br>
+                    {{movie.release_date}}
+
+                    <img src="{{IMG_URL+movie.poster_path}}" style="width: 100%">
+
+                </section>
             </ion-scroll>
-            <div class="filter-options"></div>
+
+            <div class="filter-options">
+
+            </div>
+            
         </div>
+    </ion-content>
+    
+    <div class="bar bar-footer bar-balanced footer">
+
+
+
+
     </div>
+
 
 </ion-pane>
 </body>
 </html>
 
 <style>
+    .container{
+        border: 1px solid red;
+        height: 100%;
+
+    }
+
+    .top-header{
+        border:1px solid blue;
+        height: 70px;
+        padding: 10px;
+    }
+
+    .logo, .section-title, .search-box{
+        height: 50px;
+    }
+
+    .logo, .section-title{
+        float: left;
+    }
 
 
+    .logo{
+        border: 1px solid yellow;
+        width: 50px;;
+    }
+
+    .section-title{
+        border: 1px solid green;
+        width: 150px;;
+        margin-left: 10px;
+    }
+
+    .search-box{
+        border: 1px solid purple;
+        width: 150px;
+        float: right;
+    }
+
+    .filter-box{
+        border: 1px solid green;
+        overflow: hidden;
+    }
+
+    .filter-wrapper{
+        border: 1px solid blue;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+    button{
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        font-weight: 700;
+        float: left;
+        margin-left: 10px;
+    }
+
+    .data-container{
+        border: 1px solid purple;
+        padding: 80px 0 50px 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+
+    .data-box{
+        border: 1px solid red;
+        height: 250px;
+        width: 20%;
+        display: inline-block;
+        margin-right: 25px;
+    }
+
+    .filter-options{
+        border: 1px solid blue;
+        height: 70px;
+    }
+    
+    .footer{
+        border: 1px solid red !important;
+        height: 70px;
+    }
 </style>
