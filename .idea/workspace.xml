@@ -2,9 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7067338f-3984-409c-a352-583099a4f64f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/movies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/movies.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova.xcodeproj/project.pbxproj" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Classes/AppDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Classes/AppDelegate.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Classes/MainViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Classes/MainViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Classes/MainViewController.xib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/HelloCordova-Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/HelloCordova-Prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/com.ionic.keyboard/IonicKeyboard.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/com.ionic.keyboard/IonicKeyboard.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/com.ionic.keyboard/UIWebViewExtension.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/com.ionic.keyboard/UIWebViewExtension.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-console/CDVLogger.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-console/CDVLogger.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-device/CDVDevice.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-device/CDVDevice.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-splashscreen/CDVSplashScreen.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-splashscreen/CDVSplashScreen.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-splashscreen/CDVViewController+SplashScreen.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Plugins/cordova-plugin-splashscreen/CDVViewController+SplashScreen.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-40@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-50@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-60@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-60@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-72@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-76@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon-small@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/icons/icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-568h@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-667h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-736h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-Landscape-736h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-Landscape@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-Landscape~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-Portrait@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default-Portrait~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/Resources/splash/Default~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/HelloCordova/main.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/cordova-js-src/exec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/cordova-js-src/platform.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/scss/ionic.app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MEP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,53 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
+      <file leaf-file-name="movies.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/css/movies.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2159762">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#section#0;n#ion-scroll#0;n#div#0;n#ion-content#0;n#ion-pane#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ionic.app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/ionic.app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ionic.app.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/ionic.app.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ionic.app.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8235295">
-              <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+            <state vertical-scroll-proportion="-1.7254902">
+              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -99,12 +114,50 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="29.583334">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#section#1;n#div#0;n#ion-scroll#0;n#div#1;n#div#0;n#ion-pane#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="screenp.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/screenp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6230032">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1978" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -115,7 +168,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/www/js/movies.js" />
+        <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/css/movies.scss" />
+        <option value="$PROJECT_DIR$/www/screenp.html" />
       </list>
     </option>
   </component>
@@ -159,8 +215,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,6 +263,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,6 +272,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/img" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -275,7 +337,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -313,59 +375,17 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+          <caret line="61" column="93" selection-start-line="61" selection-start-column="93" selection-end-line="61" selection-end-column="93" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#section#0;n#ion-scroll#0;n#div#0;n#ion-content#0;n#ion-pane#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#div#0;n#ion-scroll#0;n#div#1;n#div#0;n#ion-pane#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/ionic.app.css">
+    <entry file="file://$PROJECT_DIR$/www/css/movies.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/ionic.app.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/movies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -388,6 +408,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#section#1;n#div#0;n#ion-scroll#0;n#div#1;n#div#0;n#ion-pane#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/ionic.app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -400,7 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -408,24 +437,121 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8235295">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/movies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/background.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3333335">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.041436464">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/ionic.app.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/ionic.app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/movies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/movies.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7254902">
+          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1978" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2159762">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state vertical-scroll-proportion="29.583334">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#section#0;n#ion-scroll#0;n#div#0;n#ion-content#0;n#ion-pane#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#div#0;n#ion-scroll#0;n#div#1;n#div#0;n#ion-pane#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/screenp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6230032">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
