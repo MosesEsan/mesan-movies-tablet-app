@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 
-angular.module('starter', ['ionic', 'DataService', 'myApp.config'])
+angular.module('starter', ['ionic', 'DataService', 'myApp.config', 'angularMoment'])
 
     .run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
@@ -23,6 +23,11 @@ angular.module('starter', ['ionic', 'DataService', 'myApp.config'])
 
         $scope.dataService = dataService;
         $scope.IMG_URL = IMG_URL;
+
+        $scope.getMovieInfo = function(movieID, index){
+            console.log(movieID)
+            dataService.getMovieInfo(movieID, index);
+        }
 
         //for (var  i = 0; i < result.length; i++){
         //    console.log(IMG_URL+result[i].poster_path)
