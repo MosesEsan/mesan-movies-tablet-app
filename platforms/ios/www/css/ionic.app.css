@@ -7719,83 +7719,53 @@ a.button {
         border: 1px solid yellow;
         width: 50px; }
       .pane .container .top-header .section-title {
+        border: 1px solid green;
         width: 150px;
         margin-left: 10px; }
-        .pane .container .top-header .section-title p {
-          font-size: 17px;
-          line-height: 50px;
-          color: white;
-          font-weight: 700;
-          text-transform: uppercase;
-          margin: 0; }
       .pane .container .top-header .search-box {
         border: 1px solid purple;
         width: 150px;
         float: right; }
-    .pane .container .inner {
-      border: 1px solid blue;
-      padding-top: 30px; }
-      .pane .container .inner .filter-box {
-        overflow: hidden; }
-        .pane .container .inner .filter-box .filter-wrapper {
-          width: 50%;
-          margin-left: auto;
-          margin-right: auto;
-          overflow: hidden; }
-          .pane .container .inner .filter-box .filter-wrapper button {
-            width: 155px;
-            height: 55px;
-            text-align: center;
-            font-weight: 700;
-            float: left;
-            margin-left: 10px;
-            background-color: #0D1E32;
-            border: 1px solid #88B7D0;
-            color: white;
-            text-transform: uppercase;
-            border: 1px solid #6A9FBC;
-            border-top-width: 2px;
-            font-size: 14px; }
-      .pane .container .inner .data-container {
-        padding: 40px 0 50px 20px;
-        overflow: hidden;
-        white-space: nowrap;
-        overflow-x: scroll; }
-        .pane .container .inner .data-container .data-box {
-          width: 20%;
-          display: inline-block;
-          margin-right: 25px;
-          overflow: hidden; }
-          .pane .container .inner .data-container .data-box .data-date {
-            position: absolute;
-            bottom: 80px;
-            background-color: #B62E38;
-            padding: 15px;
-            margin-left: 10px;
-            opacity: 0.9; }
-            .pane .container .inner .data-container .data-box .data-date p {
-              font-size: 17px;
-              color: white;
-              line-height: 10px;
-              margin: 0;
-              font-weight: 700; }
-          .pane .container .inner .data-container .data-box .data-image {
-            height: 305px;
-            background-size: cover; }
-          .pane .container .inner .data-container .data-box .data-title {
-            height: 65px;
-            color: #D7D5D6;
-            line-height: 25px;
-            font-size: 18px;
-            text-align: center;
-            word-wrap: break-word;
-            overflow: hidden;
-            white-space: normal;
-            padding-top: 10px;
-            margin: 0; }
-      .pane .container .inner .filter-options {
+    .pane .container .filter-box {
+      border: 1px solid green;
+      overflow: hidden; }
+      .pane .container .filter-box .filter-wrapper {
         border: 1px solid blue;
-        height: 70px; }
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden; }
+        .pane .container .filter-box .filter-wrapper button {
+          width: 150px;
+          height: 50px;
+          text-align: center;
+          font-weight: 700;
+          float: left;
+          margin-left: 10px; }
+    .pane .container .data-container {
+      border: 1px solid purple;
+      padding: 80px 0 50px 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      overflow-x: scroll; }
+      .pane .container .data-container .data-box {
+        border: 1px solid red;
+        width: 15%;
+        display: inline-block;
+        margin-right: 25px; }
+        .pane .container .data-container .data-box .data-image {
+          border: 1px solid blue;
+          height: 305px;
+          background-size: cover; }
+        .pane .container .data-container .data-box .data-title {
+          border: 1px solid yellow;
+          height: 40px;
+          color: #D7D5D6;
+          line-height: 16px;
+          font-size: 15px; }
+    .pane .container .filter-options {
+      border: 1px solid blue;
+      height: 70px; }
     .pane .container .footer {
       border: 1px solid red !important;
       height: 70px; }
