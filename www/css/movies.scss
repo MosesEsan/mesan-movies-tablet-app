@@ -1,0 +1,144 @@
+.pane{
+  background-image: url("../img/background.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container{
+    border: 1px solid red;
+    height: 100%;
+
+    .top-header{
+      border:1px solid blue;
+      height: 70px;
+      padding: 10px;
+
+      .logo, .section-title, .search-box{
+        height: 50px;
+      }
+
+      .logo, .section-title{
+        float: left;
+      }
+
+      .logo{
+        border: 1px solid yellow;
+        width: 50px;;
+      }
+
+      .section-title{
+        width: 150px;;
+        margin-left: 10px;
+
+        p{
+          font-size: 17px;
+          line-height: 50px;
+          color: white;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin: 0;
+        }
+      }
+
+      .search-box{
+        border: 1px solid purple;
+        width: 150px;
+        float: right;
+      }
+    }
+
+
+    .inner{
+      border: 1px solid blue;
+      padding-top: 30px;
+
+    .filter-box{
+      overflow: hidden;
+
+      .filter-wrapper{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+
+        button{
+          width: 155px;
+          height: 55px;
+          text-align: center;
+          font-weight: 700;
+          float: left;
+          margin-left: 10px;
+          background-color: #0D1E32;
+          border: 1px solid #88B7D0;
+          color: white;
+          text-transform: uppercase;
+          border: 1px solid #6A9FBC;
+          border-top-width: 2px;
+          font-size: 14px;
+
+        }
+      }
+    }
+
+    .data-container{
+      padding: 30px 0 50px 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      overflow-x: scroll;
+
+      .data-box{
+        //height: 345px;
+        width: 20%;
+        display: inline-block;
+        margin-right: 25px;
+        overflow:hidden;
+
+        .data-date{
+          position: absolute;
+          bottom: 80px;
+          background-color: #B62E38;
+          padding: 15px;
+          margin-left: 10px;
+          opacity: 0.9;
+
+          p{
+            font-size: 17px;
+            color: white;
+            line-height: 10px;
+            margin: 0;
+            font-weight: 700;
+          }
+        }
+        .data-image{
+          height: 305px;
+          background-size: cover;
+        }
+
+        .data-title{
+          height: 65px;
+          color: #D7D5D6;
+          line-height: 25px;
+          font-size: 18px;
+          text-align: center;
+          word-wrap: break-word;
+          overflow: hidden;
+          white-space: normal;
+          padding-top: 10px;
+          margin: 0;
+        }
+      }
+    }
+
+    .filter-options{
+      border: 1px solid blue;
+      height: 70px;
+    }
+  }
+
+  .footer{
+    border: 1px solid red !important;
+    height: 70px;
+  }
+}
+}
+
+
