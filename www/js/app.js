@@ -62,13 +62,15 @@ angular.module('starter', ['ionic', 'DataService', 'myApp.config', 'angularMomen
                 dataService.getMovieInfo(id, index).then(function(response) {
 
                     var trailers = response.data.trailers;
+
+
                     if (trailers.youtube.length > 0)
                         trailer_source = "http://www.youtube.com/embed/"+trailers.youtube[0].source+"?autoplay=1"
                     else trailer_source = "img/no_trailer.jpg"
 
                     var cast = response.data.credits.cast;
 
-                    document.getElementById("trailer_"+id).src = "http://www.youtube.com/embed/"+trailer_source+"?autoplay=1"
+                    document.getElementById("trailer_"+id).src = trailer_source;
 
                     if (cast.length > 0){
                         for (var i = 0; i < cast.length; i++){
