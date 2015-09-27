@@ -27,36 +27,35 @@
 </head>
 <body ng-app="starter" ng-controller="movieController">
 
-<ion-pane>
+<div class="top-header row">
+    <div class="col-50">
+        <section class="logo">
+            <!--<img ng-src= "img/movie_icon.png">-->
+        </section>
 
-    <div class="top-header row">
-        <div class="col-50">
-            <section class="logo">
-                <!--<img ng-src= "img/movie_icon.png">-->
-            </section>
+        <section class="section-title"><p>Movies</p></section>
 
-            <section class="section-title"><p>Movies</p></section>
-
-        </div>
-        <div class="col-50">
-
-            <div class="search-box"></div>
-
-        </div>
     </div>
+    <div class="col-50">
 
+        <div class="search-box"></div>
 
-    <div id="container">
-        <div id="inner">
-            <div class="filter-box">
-                <section class="filter-wrapper">
-                    <button ng-repeat="menu in menuOptions" ng-class="{'active' : currentOption.name === menu.name}" ng-click="changeMenuOption(menu)">{{menu.name}}</button>
-                </section>
-            </div>
+    </div>
+</div>
+
+<ion-content class="main-content">
+    <div id="inner">
+        <!--<div class="filter-box">-->
+        <!--<section class="filter-wrapper">-->
+        <!--<button ng-repeat="menu in menuOptions" ng-class="{'active' : currentOption.name === menu.name}" ng-click="changeMenuOption(menu)">{{menu.name}}</button>-->
+        <!--</section>-->
+        <!--</div>-->
+        <div class="section-container" ng-repeat="menu in menuOptions">
+            <h1 class="section-title">{{menu.name}}</h1>
             <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container">
 
-                <div class="data-box" ng-repeat="movie in dataService.upcoming_movies | orderBy: 'release_date'"
-                        ng-click="selectMovie(movie.id, $index)" ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}">
+                <div class="data-box" ng-repeat="movie in dataService.movies[menu.endpoint] | orderBy: 'release_date'"
+                     ng-click="selectMovie(movie.id, $index)" ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}">
 
                     <section class="left">
                         <section class="data-date"><p>{{movie.release_date | amDateFormat:'MMMM Do'}}</p></section>
@@ -78,13 +77,25 @@
             </ion-scroll>
         </div>
     </div>
-</ion-pane>
+</ion-content>
 </body>
 </html>
 
 <style>
+    .section-container{
+        border: 1px solid green;
+        margin-top: 10px;
+    }
+    .section-title{
+        margin: 0 0 0 20px;
+        font-size: 18px;
+        color: white;
+        text-transform: uppercase;
+        line-height: 40px;
+        font-weight: 700;
+    }
     .data-box{
-        height: 415px !important;
+        height: 400px !important;
     }
     .data-box.active {
         background-color: #0b1b2d;

@@ -1,182 +1,182 @@
-.pane{
-  background-image: url("../img/background.png") !important;
-  background-repeat: no-repeat;
-  background-size: cover;
 
 
-  .top-header{
-    border:1px solid blue;
-    height: 70px;
-    padding: 10px;
+.top-header{
+  border:1px solid blue;
+  height: 70px;
+  padding: 10px;
 
-    .logo, .section-title, .search-box{
-      height: 50px;
-    }
+  .logo, .section-title, .search-box{
+    height: 50px;
+  }
 
-    .logo, .section-title{
-      float: left;
-    }
+  .logo, .section-title{
+    float: left;
+  }
 
-    .logo{
-      border: 1px solid rgb(60,77,95);
-      width: 50px;
-      overflow: hidden;
-      border-radius: 50%;
+  .logo{
+    border: 1px solid rgb(60,77,95);
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
 
-      img{
-        height: 100%;
-      }
-    }
-
-    .section-title{
-      width: 150px;;
-      margin-left: 15px;
-
-      p{
-        font-size: 17px;
-        line-height: 50px;
-        color: white;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin: 0;
-      }
-    }
-
-    .search-box{
-      border: 1px solid purple;
-      width: 150px;
-      float: right;
+    img{
+      height: 100%;
     }
   }
 
+  .section-title{
+    width: 150px;;
+    margin-left: 15px;
 
+    p{
+      font-size: 17px;
+      line-height: 50px;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
 
+  .search-box{
+    border: 1px solid purple;
+    width: 150px;
+    float: right;
+  }
+}
+.main-content{
+  background-image: url("../img/background.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 70px;
 
-  #container{
+  .scroll{
     height: 100%;
-    position: relative;
-    margin-top: -70px;
+  }
 
-    #inner{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 500px;
-      margin: auto;
+
+  #inner{
+    //position: absolute;
+    //top: 0;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    //width: 100%;
+    //height: 500px;
+    //margin: auto;
+    //overflow: hidden;
+
+    width: 100%;
+    /* height: 100%; */
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid green;
+
+    .filter-box{
       overflow: hidden;
 
-      .filter-box{
+      .filter-wrapper{
+        width: 572px;
+        margin-left: auto;
+        margin-right: auto;
         overflow: hidden;
 
-        .filter-wrapper{
-          width: 572px;
-          margin-left: auto;
-          margin-right: auto;
-          overflow: hidden;
 
-
-          button{
-            width: 175px;
-            height: 55px;
-            text-align: center;
-            float: left;
-            margin-right: 15px;
-            background-color: #0D1E32;
-            background-color: rgb(16,41,63);
-            color: white;
-            text-transform: uppercase;
-            border: none;
-            border-top: 1px solid rgb(49,63,93);
-            border-top-width: 2px;
-            font-size: 14px;
-
-          }
-
-          button.active{
-            background-color: #99CAE3;
-            background-color: rgb(25,156,225);
-            font-weight: 700;
-          }
-        }
-      }
-
-      .data-container{
-        padding: 30px 0 50px 20px;
-        overflow: hidden;
-        white-space: nowrap;
-        overflow-x: scroll;
-
-        .data-box{
-          height: 395px;
-          width: 204px;
-          display: inline-block;
+        button{
+          width: 175px;
+          height: 55px;
+          text-align: center;
+          float: left;
           margin-right: 15px;
-          overflow:hidden;
-          padding: 20px 0 0 0;
+          background-color: #0D1E32;
+          background-color: rgb(16,41,63);
+          color: white;
+          text-transform: uppercase;
+          border: none;
+          border-top: 1px solid rgb(49,63,93);
+          border-top-width: 2px;
+          font-size: 14px;
 
-
-          .left{
-            width: 204px;
-            float: left;
-          }
-
-          .right{
-            //border: 1px solid green;
-            //width: 100px;
-            //float: left;
-          }
-
-          .data-date{
-            position: absolute;
-            bottom: 110px;
-            background-color: #B62E38;
-            padding: 15px;
-            margin-left: 10px;
-            opacity: 0.9;
-
-            p{
-              font-size: 17px;
-              color: white;
-              line-height: 10px;
-              margin: 0;
-              font-weight: 700;
-            }
-          }
-          .data-image{
-            width: 204px;
-            height: 305px;
-            background-size: cover;
-            background-size: 204px 305px;
-          }
-
-          .data-title{
-            height: 65px;
-            color: #D7D5D6;
-            line-height: 25px;
-            font-size: 18px;
-            text-align: center;
-            word-wrap: break-word;
-            overflow: hidden;
-            white-space: normal;
-            padding-top: 10px;
-            margin: 0;
-          }
         }
-      }
 
-      .filter-options{
-        border: 1px solid blue;
-        height: 70px;
+        button.active{
+          background-color: #99CAE3;
+          background-color: rgb(25,156,225);
+          font-weight: 700;
+        }
       }
     }
 
-    //.footer{
-    //  border: 1px solid red !important;
-    //  height: 70px;
-    //}
+    .data-container{
+      padding: 0 0 0 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      overflow-x: scroll;
+      height: 395px;
+      border: 1px solid green;
+
+      .data-box{
+        height: 395px;
+        width: 204px;
+        display: inline-block;
+        margin-right: 15px;
+        overflow:hidden;
+        padding: 20px 0 0 0;
+
+
+        .left{
+          width: 204px;
+          float: left;
+        }
+
+        .right{
+          //border: 1px solid green;
+          //width: 100px;
+          //float: left;
+        }
+
+        .data-date{
+          position: absolute;
+          bottom: 110px;
+          background-color: #B62E38;
+          padding: 15px;
+          margin-left: 10px;
+          opacity: 0.9;
+
+          p{
+            font-size: 17px;
+            color: white;
+            line-height: 10px;
+            margin: 0;
+            font-weight: 700;
+          }
+        }
+        .data-image{
+          width: 204px;
+          height: 305px;
+          background-size: cover;
+          background-size: 204px 305px;
+        }
+
+        .data-title{
+          height: 65px;
+          color: #D7D5D6;
+          line-height: 25px;
+          font-size: 18px;
+          text-align: center;
+          word-wrap: break-word;
+          overflow: hidden;
+          white-space: normal;
+          padding-top: 10px;
+          margin: 0;
+        }
+      }
+    }
+
+    .filter-options{
+      border: 1px solid blue;
+      height: 70px;
+    }
   }
 }
 

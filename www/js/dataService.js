@@ -4,33 +4,37 @@
 
 MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, API_URL) {
 
-    this.upcoming_movies;
+    this.movies = {};
     var deferred = $q.defer();// deferred contains the promise to be returned
     var self = this;
 
-    this.getData = function(endpoint){
-        console.log(endpoint)
-        //Get data from server
-        $http.get(API_URL+endpoint+'?api_key='+API_KEY)
 
-            .then(function(response) {
-                if (typeof response.data === 'object') {
-                    deferred.resolve(response);// to resolve (fulfill) a promise use .resolve
-                    self.upcoming_movies = response.data.results;
-                    //save to local
-                    $localStorage.last_updated = new Date();
-                } else {
-                    // invalid response
-                    deferred.reject(response.data);
+    this.getData = function(){
+
+        var promises = [];
+        var menuOptions = $rootScope.menuOptions;
+        console.log($rootScope.menuOptions)
+
+        for(var i = 0; i < menuOptions.length; i++){
+            var promise = $http({method: 'GET', url: API_URL+menuOptions[i].endpoint+'?api_key='+API_KEY, cache: 'true'});
+            promises.push(promise);
+        }
+
+        $q.all(promises).then(function(data){
+            console.log(data[0], data[1]);
+            console.log(data.length);
+            for (var i = 0; i < data.length; i++){
+                if (typeof data[i].data === 'object') {
+                    var endpoint = menuOptions[i].endpoint;
+                    self.movies[endpoint] = data[i].data.results;
                 }
+            }
+            //Save to local storage
+            self.movies["last_updated"] = new Date();
+            $localStorage.movies = self.movies;
+        });
 
-            }, function(response) {
-                // something went wrong
-                deferred.reject(response);// to reject a promise use .reject
-            });
-
-        // promise is returned
-        return deferred.promise;
+        return $q.all(promises);
     };
 
     this.getMovieInfo = function(movieID, index){
@@ -83,22 +87,23 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, API_URL) {
     };
 
     //Initialise, call the api to get the data
-    this.checkForUpdates = function(endpoint){
-
-        console.log(endpoint)
+    this.checkForUpdates = function(){
         var cachedData = $localStorage.cached_data; //get local cached storage data
-        if (cachedData === null || cachedData === undefined){
-            self.getData(endpoint);
+        if (cachedData === undefined){
+            $localStorage.cached_data = {};
+            self.getData();
         }else{
-            self.upcoming_movies = cachedData;
-            var last_updated = $localStorage.last_updated; //check last updated date
-            if (last_updated === null || last_updated === undefined || this.getTimeDiff(last_updated) >= 1)
-                this.getData(endpoint);
+            self.movies = cachedData;
+            var last_updated = cachedData.last_updated; //check last updated date
+            if (last_updated === null || last_updated === undefined || this.getTimeDiff(last_updated) >= 1){
+                console.log("refreshinfg data")
+                this.getData();
+            }
         }
     };
 
     //Call the initialize function to retrieve the data
-    this.checkForUpdates($rootScope.currentOption.endpoint);
+    this.checkForUpdates();
 
 }
 

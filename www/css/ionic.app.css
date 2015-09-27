@@ -7700,122 +7700,120 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.pane {
+.top-header {
+  border: 1px solid blue;
+  height: 70px;
+  padding: 10px; }
+  .top-header .logo, .top-header .section-title, .top-header .search-box {
+    height: 50px; }
+  .top-header .logo, .top-header .section-title {
+    float: left; }
+  .top-header .logo {
+    border: 1px solid #3c4d5f;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%; }
+    .top-header .logo img {
+      height: 100%; }
+  .top-header .section-title {
+    width: 150px;
+    margin-left: 15px; }
+    .top-header .section-title p {
+      font-size: 17px;
+      line-height: 50px;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0; }
+  .top-header .search-box {
+    border: 1px solid purple;
+    width: 150px;
+    float: right; }
+
+.main-content {
   background-image: url("../img/background.png") !important;
   background-repeat: no-repeat;
-  background-size: cover; }
-  .pane .top-header {
-    border: 1px solid blue;
-    height: 70px;
-    padding: 10px; }
-    .pane .top-header .logo, .pane .top-header .section-title, .pane .top-header .search-box {
-      height: 50px; }
-    .pane .top-header .logo, .pane .top-header .section-title {
-      float: left; }
-    .pane .top-header .logo {
-      border: 1px solid #3c4d5f;
-      width: 50px;
-      overflow: hidden;
-      border-radius: 50%; }
-      .pane .top-header .logo img {
-        height: 100%; }
-    .pane .top-header .section-title {
-      width: 150px;
-      margin-left: 15px; }
-      .pane .top-header .section-title p {
-        font-size: 17px;
-        line-height: 50px;
-        color: white;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin: 0; }
-    .pane .top-header .search-box {
-      border: 1px solid purple;
-      width: 150px;
-      float: right; }
-  .pane #container {
-    height: 100%;
-    position: relative;
-    margin-top: -70px; }
-    .pane #container #inner {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 500px;
-      margin: auto;
+  background-size: cover;
+  top: 70px; }
+  .main-content .scroll {
+    height: 100%; }
+  .main-content #inner {
+    width: 100%;
+    /* height: 100%; */
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid green; }
+    .main-content #inner .filter-box {
       overflow: hidden; }
-      .pane #container #inner .filter-box {
+      .main-content #inner .filter-box .filter-wrapper {
+        width: 572px;
+        margin-left: auto;
+        margin-right: auto;
         overflow: hidden; }
-        .pane #container #inner .filter-box .filter-wrapper {
-          width: 572px;
-          margin-left: auto;
-          margin-right: auto;
-          overflow: hidden; }
-          .pane #container #inner .filter-box .filter-wrapper button {
-            width: 175px;
-            height: 55px;
-            text-align: center;
-            float: left;
-            margin-right: 15px;
-            background-color: #0D1E32;
-            background-color: #10293f;
-            color: white;
-            text-transform: uppercase;
-            border: none;
-            border-top: 1px solid #313f5d;
-            border-top-width: 2px;
-            font-size: 14px; }
-          .pane #container #inner .filter-box .filter-wrapper button.active {
-            background-color: #99CAE3;
-            background-color: #199ce1;
-            font-weight: 700; }
-      .pane #container #inner .data-container {
-        padding: 30px 0 50px 20px;
-        overflow: hidden;
-        white-space: nowrap;
-        overflow-x: scroll; }
-        .pane #container #inner .data-container .data-box {
-          height: 395px;
-          width: 204px;
-          display: inline-block;
+        .main-content #inner .filter-box .filter-wrapper button {
+          width: 175px;
+          height: 55px;
+          text-align: center;
+          float: left;
           margin-right: 15px;
+          background-color: #0D1E32;
+          background-color: #10293f;
+          color: white;
+          text-transform: uppercase;
+          border: none;
+          border-top: 1px solid #313f5d;
+          border-top-width: 2px;
+          font-size: 14px; }
+        .main-content #inner .filter-box .filter-wrapper button.active {
+          background-color: #99CAE3;
+          background-color: #199ce1;
+          font-weight: 700; }
+    .main-content #inner .data-container {
+      padding: 0 0 0 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      overflow-x: scroll;
+      height: 395px;
+      border: 1px solid green; }
+      .main-content #inner .data-container .data-box {
+        height: 395px;
+        width: 204px;
+        display: inline-block;
+        margin-right: 15px;
+        overflow: hidden;
+        padding: 20px 0 0 0; }
+        .main-content #inner .data-container .data-box .left {
+          width: 204px;
+          float: left; }
+        .main-content #inner .data-container .data-box .data-date {
+          position: absolute;
+          bottom: 110px;
+          background-color: #B62E38;
+          padding: 15px;
+          margin-left: 10px;
+          opacity: 0.9; }
+          .main-content #inner .data-container .data-box .data-date p {
+            font-size: 17px;
+            color: white;
+            line-height: 10px;
+            margin: 0;
+            font-weight: 700; }
+        .main-content #inner .data-container .data-box .data-image {
+          width: 204px;
+          height: 305px;
+          background-size: cover;
+          background-size: 204px 305px; }
+        .main-content #inner .data-container .data-box .data-title {
+          height: 65px;
+          color: #D7D5D6;
+          line-height: 25px;
+          font-size: 18px;
+          text-align: center;
+          word-wrap: break-word;
           overflow: hidden;
-          padding: 20px 0 0 0; }
-          .pane #container #inner .data-container .data-box .left {
-            width: 204px;
-            float: left; }
-          .pane #container #inner .data-container .data-box .data-date {
-            position: absolute;
-            bottom: 110px;
-            background-color: #B62E38;
-            padding: 15px;
-            margin-left: 10px;
-            opacity: 0.9; }
-            .pane #container #inner .data-container .data-box .data-date p {
-              font-size: 17px;
-              color: white;
-              line-height: 10px;
-              margin: 0;
-              font-weight: 700; }
-          .pane #container #inner .data-container .data-box .data-image {
-            width: 204px;
-            height: 305px;
-            background-size: cover;
-            background-size: 204px 305px; }
-          .pane #container #inner .data-container .data-box .data-title {
-            height: 65px;
-            color: #D7D5D6;
-            line-height: 25px;
-            font-size: 18px;
-            text-align: center;
-            word-wrap: break-word;
-            overflow: hidden;
-            white-space: normal;
-            padding-top: 10px;
-            margin: 0; }
-      .pane #container #inner .filter-options {
-        border: 1px solid blue;
-        height: 70px; }
+          white-space: normal;
+          padding-top: 10px;
+          margin: 0; }
+    .main-content #inner .filter-options {
+      border: 1px solid blue;
+      height: 70px; }
