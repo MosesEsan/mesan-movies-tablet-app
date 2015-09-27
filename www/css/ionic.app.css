@@ -7704,85 +7704,108 @@ a.button {
   background-image: url("../img/background.png") !important;
   background-repeat: no-repeat;
   background-size: cover; }
-  .pane .container {
-    border: 1px solid red;
-    height: 100%; }
-    .pane .container .top-header {
-      border: 1px solid blue;
-      height: 70px;
-      padding: 10px; }
-      .pane .container .top-header .logo, .pane .container .top-header .section-title, .pane .container .top-header .search-box {
-        height: 50px; }
-      .pane .container .top-header .logo, .pane .container .top-header .section-title {
-        float: left; }
-      .pane .container .top-header .logo {
-        border: 1px solid yellow;
-        width: 50px; }
-      .pane .container .top-header .section-title {
-        width: 150px;
-        margin-left: 10px; }
-        .pane .container .top-header .section-title p {
-          font-size: 17px;
-          line-height: 50px;
-          color: white;
-          font-weight: 700;
-          text-transform: uppercase;
-          margin: 0; }
-      .pane .container .top-header .search-box {
-        border: 1px solid purple;
-        width: 150px;
-        float: right; }
-    .pane .container .inner {
-      border: 1px solid blue;
-      padding-top: 30px; }
-      .pane .container .inner .filter-box {
+  .pane .top-header {
+    border: 1px solid blue;
+    height: 70px;
+    padding: 10px; }
+    .pane .top-header .logo, .pane .top-header .section-title, .pane .top-header .search-box {
+      height: 50px; }
+    .pane .top-header .logo, .pane .top-header .section-title {
+      float: left; }
+    .pane .top-header .logo {
+      border: 1px solid #3c4d5f;
+      width: 50px;
+      overflow: hidden;
+      border-radius: 50%; }
+      .pane .top-header .logo img {
+        height: 100%; }
+    .pane .top-header .section-title {
+      width: 150px;
+      margin-left: 15px; }
+      .pane .top-header .section-title p {
+        font-size: 17px;
+        line-height: 50px;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0; }
+    .pane .top-header .search-box {
+      border: 1px solid purple;
+      width: 150px;
+      float: right; }
+  .pane #container {
+    height: 100%;
+    position: relative;
+    margin-top: -70px; }
+    .pane #container #inner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 500px;
+      margin: auto;
+      overflow: hidden; }
+      .pane #container #inner .filter-box {
         overflow: hidden; }
-        .pane .container .inner .filter-box .filter-wrapper {
-          width: 50%;
+        .pane #container #inner .filter-box .filter-wrapper {
+          width: 572px;
           margin-left: auto;
           margin-right: auto;
           overflow: hidden; }
-          .pane .container .inner .filter-box .filter-wrapper button {
-            width: 155px;
+          .pane #container #inner .filter-box .filter-wrapper button {
+            width: 175px;
             height: 55px;
             text-align: center;
-            font-weight: 700;
             float: left;
-            margin-left: 10px;
+            margin-right: 15px;
             background-color: #0D1E32;
-            border: 1px solid #88B7D0;
+            background-color: #10293f;
             color: white;
             text-transform: uppercase;
-            border: 1px solid #6A9FBC;
+            border: none;
+            border-top: 1px solid #313f5d;
             border-top-width: 2px;
             font-size: 14px; }
-      .pane .container .inner .data-container {
-        padding: 40px 0 50px 20px;
+          .pane #container #inner .filter-box .filter-wrapper button.active {
+            background-color: #99CAE3;
+            background-color: #199ce1;
+            font-weight: 700; }
+      .pane #container #inner .data-container {
+        padding: 30px 0 50px 20px;
         overflow: hidden;
         white-space: nowrap;
         overflow-x: scroll; }
-        .pane .container .inner .data-container .data-box {
-          width: 20%;
+        .pane #container #inner .data-container .data-box {
+          height: 395px;
+          width: 204px;
           display: inline-block;
-          margin-right: 25px;
-          overflow: hidden; }
-          .pane .container .inner .data-container .data-box .data-date {
+          margin-right: 15px;
+          overflow: hidden;
+          padding: 20px 0 0 0; }
+          .pane #container #inner .data-container .data-box .left {
+            width: 204px;
+            float: left; }
+          .pane #container #inner .data-container .data-box .data-date {
             position: absolute;
-            bottom: 80px;
+            bottom: 110px;
             background-color: #B62E38;
             padding: 15px;
             margin-left: 10px;
             opacity: 0.9; }
-            .pane .container .inner .data-container .data-box .data-date p {
+            .pane #container #inner .data-container .data-box .data-date p {
               font-size: 17px;
               color: white;
               line-height: 10px;
               margin: 0;
               font-weight: 700; }
-          .pane .container .inner .data-container .data-box .data-image {
+          .pane #container #inner .data-container .data-box .data-image {
+            width: 204px;
             height: 305px;
-            background-size: cover; }
-          .pane .container .inner .data-container .data-box .data-title {
+            background-size: cover;
+            background-size: 204px 305px; }
+          .pane #container #inner .data-container .data-box .data-title {
             height: 65px;
             color: #D7D5D6;
             line-height: 25px;
@@ -7793,9 +7816,6 @@ a.button {
             white-space: normal;
             padding-top: 10px;
             margin: 0; }
-      .pane .container .inner .filter-options {
+      .pane #container #inner .filter-options {
         border: 1px solid blue;
         height: 70px; }
-    .pane .container .footer {
-      border: 1px solid red !important;
-      height: 70px; }

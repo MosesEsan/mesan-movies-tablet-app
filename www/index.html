@@ -29,46 +29,99 @@
 
 <ion-pane>
 
-    <div class="container">
+    <div class="top-header row">
+        <div class="col-50">
+            <section class="logo">
+                <!--<img ng-src= "img/movie_icon.png">-->
+            </section>
 
-        <div class="top-header row">
-            <div class="col-50">
-                <section class="logo">
+            <section class="section-title"><p>Movies</p></section>
 
-                </section>
-
-                <section class="section-title"><p>Movies</p></section>
-
-            </div>
-            <div class="col-50">
-
-                <div class="search-box"></div>
-
-            </div>
         </div>
+        <div class="col-50">
 
-        <div class="inner">
-            <div class="filter-box">
-                <section class="filter-wrapper">
-                    <button>Upcoming</button>
-                    <button>New Releases</button>
-                    <button>Movies A-Z</button>
-                </section>
-            </div>
-            <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container">
-                <div class="data-box" ng-repeat="movie in dataService.upcoming_movies">
-                    <section class="data-date"><p>{{movie.release_date.toString("MMMM yyyy");}}</p></section>
-                    <section class="data-image" style="background-image: url({{IMG_URL+movie.poster_path}})"></section>
-                    <p class="data-title">{{movie.title}}</p>
-                </div>
-            </ion-scroll>
-            <div class="filter-options"></div>
+            <div class="search-box"></div>
+
         </div>
     </div>
 
+
+    <div id="container">
+        <div id="inner">
+            <div class="filter-box">
+                <section class="filter-wrapper">
+                    <button ng-repeat="menu in menuOptions" ng-class="{'active' : currentOption.name === menu.name}" ng-click="changeMenuOption(menu)">{{menu.name}}</button>
+                </section>
+            </div>
+            <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container">
+
+                <div class="data-box" ng-repeat="movie in dataService.upcoming_movies | orderBy: 'release_date'"
+                        ng-click="selectMovie(movie.id, $index)" ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}">
+
+                    <section class="left">
+                        <section class="data-date"><p>{{movie.release_date | amDateFormat:'MMMM Do'}}</p></section>
+                        <section class="data-image" style="background-image: url({{IMG_URL+movie.poster_path}})"></section>
+                        <p class="data-title">{{movie.title}}</p>
+                    </section>
+
+                    <section class="right" ng-show="selectedMovie === movie.id">
+
+                        <!--<iframe scr="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1"></iframe>-->
+                        <iframe src="" id="trailer_{{movie.id}}">
+                            <p>Your browser does not support iframes.</p>
+                        </iframe>
+                        <p class="cast"><span>Cast: </span>{{all_actors}}</p>
+
+
+                    </section>
+                </div>
+            </ion-scroll>
+        </div>
+    </div>
 </ion-pane>
 </body>
 </html>
 
 <style>
+    .data-box{
+        height: 415px !important;
+    }
+    .data-box.active {
+        background-color: #0b1b2d;
+        border: 1px solid #253446;
+        width: 800px !important;
+        padding: 20px!important;
+    }
+
+    .right {
+        width: 534px;
+        height: 305px;
+        float: left;
+        margin-left: 20px;
+    }
+
+    iframe{
+        width: 100%;
+        float: left;
+        height: 100%;
+    }
+
+    .cast{
+        width: 100%;
+        height: 65px;
+        color: #D7D5D6;
+        line-height: 25px;
+        font-size: 18px;
+        text-align: center;
+        word-wrap: break-word;
+        overflow: hidden;
+        white-space: normal;
+        padding-top: 10px;
+        margin: 0;
+    }
+    
+    .cast span{
+        font-weight: 700;
+    }
+
 </style>

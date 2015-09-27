@@ -5,8 +5,20 @@
 // the 2nd parameter is an array of 'requires'
 
 angular.module('starter', ['ionic', 'DataService', 'myApp.config', 'angularMoment'])
+    .config(function() {
 
-    .run(function($ionicPlatform) {
+    })
+    .run(function($ionicPlatform, $rootScope) {
+
+        //temp
+        $rootScope.menuOptions =[
+            {name : "Now Playing", endpoint: "now_playing"},
+            {name : "Upcoming Movies", endpoint: "upcoming"},
+            {name : "Popular Movies", endpoint: "popular"}
+        ];
+
+        $rootScope.currentOption = $rootScope.menuOptions[0];
+
         $ionicPlatform.ready(function() {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
@@ -19,15 +31,77 @@ angular.module('starter', ['ionic', 'DataService', 'myApp.config', 'angularMomen
         });
     })
 
-    .controller("movieController", function ($scope, $q, dataService, IMG_URL) {
+
+    .controller("movieController", function ($scope, $rootScope, dataService, IMG_URL) {
 
         $scope.dataService = dataService;
         $scope.IMG_URL = IMG_URL;
+
+        $scope.selectedMovie = 0;
+        $scope.all_actors = "";
 
         $scope.getMovieInfo = function(movieID, index){
             console.log(movieID)
             dataService.getMovieInfo(movieID, index);
         }
+
+        $scope.changeMenuOption = function(menuOption){
+            $rootScope.currentOption = menuOption;
+            dataService.checkForUpdates(menuOption.endpoint);
+        }
+
+
+        $scope.selectMovie = function(id, index){
+            $scope.selectedMovie = id;
+            $scope.all_actors = "";
+
+            var trailer_source = "";
+            var actors = []
+
+            if (!("cast" in dataService.upcoming_movies[index])){
+                dataService.getMovieInfo(id, index).then(function(response) {
+
+                    var trailers = response.data.trailers;
+                    if (trailers.youtube.length > 0)
+                        trailer_source = "http://www.youtube.com/embed/"+trailers.youtube[0].source+"?autoplay=1"
+                    else trailer_source = "img/no_trailer.jpg"
+
+                    var cast = response.data.credits.cast;
+
+                    document.getElementById("trailer_"+id).src = "http://www.youtube.com/embed/"+trailer_source+"?autoplay=1"
+
+                    if (cast.length > 0){
+                        for (var i = 0; i < cast.length; i++){
+                            actors.push(cast[i].name)
+                        }
+                        var all_actors = actors.join(', ');
+                        if (all_actors.length > 100) all_actors = all_actors.substring(0, 100 - 3) + "...";
+                        $scope.all_actors = all_actors;
+                    }
+
+                }, function(response) {
+                    // something went wrong
+                });
+            }else{
+                var movie = dataService.upcoming_movies[index];
+
+                if (document.getElementById("trailer_"+id).src === ""){
+                    document.getElementById("trailer_"+id).src = "http://www.youtube.com/embed/"+movie.trailers[0].source+"?autoplay=1";
+                }
+
+                var cast = movie.cast;
+
+                if (cast.length > 0){
+                    for (var i = 0; i < cast.length; i++){
+                        actors.push(cast[i].name)
+                    }
+                    var all_actors = actors.join(', ');
+                    if (all_actors.length > 100) all_actors = all_actors.substring(0, 100 - 3) + "...";
+                    $scope.all_actors = all_actors;
+                }
+            }
+        }
+
 
         //for (var  i = 0; i < result.length; i++){
         //    console.log(IMG_URL+result[i].poster_path)
