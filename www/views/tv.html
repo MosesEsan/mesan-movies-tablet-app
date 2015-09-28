@@ -5,8 +5,7 @@
                 <h1 class="section-title">{{menu.name}}</h1>
                 <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container" disable-side-menu>
 
-                    <div class="data-box" ng-repeat="tvShow in dataService.tvShows[menu.endpoint] | orderBy: 'release_date'"
-                         ng-click="selectMovie(tvShow.id, $index)">
+                    <div class="data-box" ng-repeat="tvShow in dataService.tvShows[menu.endpoint]">
 
                         <section class="left">
                             <!--<section class="data-date"><p>{{tvShow.first_air_date | amDateFormat:'MMMM Do'}}</p></section>-->

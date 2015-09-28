@@ -31,26 +31,42 @@
 </head>
 <body ng-app="starter">
 
-<div class="top-header">
-    <div class="row">
-        <div class="col-50">
-            <section class="logo">
-                <!--<img ng-src= "img/movie_icon.png">-->
-            </section>
-
-            <div class="menu-container">
-                <section ng-repeat="view in views" ng-class="{'active': currentState === view.toLowerCase()}" ui-sref="{{view.toLowerCase()}}" nav-transition="ios">{{view}}</section>
-            </div>
-            <!--<section class="section-title"><p>Movies</p></section>-->
-
-        </div>
-        <div class="col-50">
-
-            <div class="search-box"></div>
-
-        </div>
+<ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+        <button class="button" ng-click="doSomething()">Left Button</button>
     </div>
-</div>
+    <h1 class="title">Title!</h1>
+    <div class="buttons">
+        <button class="button">Right Button</button>
+    </div>
+</ion-header-bar>
+
+<ion-header-bar class="bar bar-subheader menu-container">
+    <section ng-repeat="view in views" ng-class="{'active': currentState === view.toLowerCase()}" ui-sref="{{view.toLowerCase()}}" nav-transition="ios">{{view}}</section>
+</ion-header-bar>
+
+
+
+
+
+<!--<div class="top-header">-->
+
+    <!--<div class="row">-->
+    <!--<div class="col-50">-->
+    <!--<section class="logo">-->
+    <!--&lt;!&ndash;<img ng-src= "img/movie_icon.png">&ndash;&gt;-->
+    <!--</section>-->
+    <!--&lt;!&ndash;<section class="section-title"><p>Movies</p></section>&ndash;&gt;-->
+
+    <!--</div>-->
+    <!--<div class="col-50">-->
+
+    <!--<div class="search-box"></div>-->
+
+    <!--</div>-->
+    <!--</div>-->
+
+<!--</div>-->
 
 <ion-nav-view animation="slide-left-right"></ion-nav-view>
 </body>

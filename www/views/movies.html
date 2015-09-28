@@ -6,7 +6,7 @@
                 <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container" disable-side-menu>
 
                     <div class="data-box" ng-repeat="movie in dataService.movies[menu.endpoint] | orderBy: 'release_date'"
-                         ng-click="selectMovie(movie.id, $index)" ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}">
+                         ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}">
 
                         <section class="left">
                             <section class="data-date"><p>{{movie.release_date | amDateFormat:'MMMM Do'}}</p></section>

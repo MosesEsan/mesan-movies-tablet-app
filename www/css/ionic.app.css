@@ -7700,55 +7700,34 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.top-header {
-  height: 80px;
-  padding: 10px 10px 0 10px;
-  background-color: #0b1b2d;
-  border-bottom: 1px solid #D7D5D6; }
-  .top-header .logo, .top-header .section-title, .top-header .search-box {
-    height: 50px; }
-  .top-header .logo, .top-header .section-title {
-    float: left; }
-  .top-header .logo {
-    border: 1px solid #3c4d5f;
-    width: 50px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 15px; }
-    .top-header .logo img {
-      height: 100%; }
-  .top-header .section-title {
-    width: 150px;
-    margin-left: 15px; }
-    .top-header .section-title p {
-      font-size: 17px;
-      line-height: 50px;
-      color: white;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin: 0; }
-  .top-header .search-box {
-    border: 1px solid purple;
-    width: 150px;
-    float: right; }
-  .top-header .menu-container {
+body {
+  background-image: url("../img/background.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.menu-container {
+  height: 44px;
+  width: 100%;
+  padding-left: 20px;
+  background-color: yellow;
+  background-image: url("../img/background.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .menu-container section {
     height: 40px;
-    width: 100%; }
-    .top-header .menu-container section {
-      height: 40px;
-      min-width: 110px;
-      float: left;
-      margin-right: 10px;
-      font-size: 18px;
-      color: white;
-      text-transform: uppercase;
-      line-height: 40px;
-      font-weight: 700;
-      padding: 0 10px 10px;
-      text-align: center; }
-    .top-header .menu-container section.active {
-      border-bottom: 3px solid #B62E38;
-      border-bottom: 3px solid #199ce1; }
+    min-width: 110px;
+    float: left;
+    margin-right: 10px;
+    font-size: 17px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 700;
+    padding: 0 10px 10px;
+    text-align: center; }
+  .menu-container section.active {
+    border-bottom: 3px solid #B62E38;
+    border-bottom: 3px solid #199ce1; }
 
 .main-content {
   background-image: url("../img/background.png") !important;
@@ -7789,17 +7768,18 @@ a.button {
           font-weight: 700; }
     .main-content #inner .section-container .section-title {
       margin: 0 0 0 20px;
-      font-size: 18px;
+      font-size: 17px;
       color: white;
       text-transform: uppercase;
-      line-height: 40px;
+      line-height: 35px;
       font-weight: 700; }
     .main-content #inner .data-container {
       padding: 0 0 0 20px;
       overflow: hidden;
       white-space: nowrap;
       overflow-x: scroll;
-      height: 395px; }
+      height: 375px;
+      margin-top: 10px; }
       .main-content #inner .data-container .data-box.active {
         background-color: #0b1b2d;
         border: 1px solid #253446;
@@ -7811,7 +7791,7 @@ a.button {
         display: inline-block;
         margin-right: 15px;
         overflow: hidden;
-        padding: 20px 0 0 0; }
+        padding: 0; }
         .main-content #inner .data-container .data-box .left {
           width: 204px;
           float: left; }
