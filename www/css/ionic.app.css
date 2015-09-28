@@ -7701,9 +7701,10 @@ a.button {
   transition-duration: 0s; }
 
 .top-header {
-  border: 1px solid blue;
-  height: 70px;
-  padding: 10px; }
+  height: 80px;
+  padding: 10px 10px 0 10px;
+  background-color: #0b1b2d;
+  border-bottom: 1px solid #D7D5D6; }
   .top-header .logo, .top-header .section-title, .top-header .search-box {
     height: 50px; }
   .top-header .logo, .top-header .section-title {
@@ -7712,7 +7713,8 @@ a.button {
     border: 1px solid #3c4d5f;
     width: 50px;
     overflow: hidden;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin-right: 15px; }
     .top-header .logo img {
       height: 100%; }
   .top-header .section-title {
@@ -7729,20 +7731,37 @@ a.button {
     border: 1px solid purple;
     width: 150px;
     float: right; }
+  .top-header .menu-container {
+    height: 40px;
+    width: 100%; }
+    .top-header .menu-container section {
+      height: 40px;
+      min-width: 110px;
+      float: left;
+      margin-right: 10px;
+      font-size: 18px;
+      color: white;
+      text-transform: uppercase;
+      line-height: 40px;
+      font-weight: 700;
+      padding: 0 10px 10px;
+      text-align: center; }
+    .top-header .menu-container section.active {
+      border-bottom: 3px solid #B62E38;
+      border-bottom: 3px solid #199ce1; }
 
 .main-content {
   background-image: url("../img/background.png") !important;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 70px; }
+  padding-bottom: 120px; }
   .main-content .scroll {
     height: 100%; }
   .main-content #inner {
     width: 100%;
-    /* height: 100%; */
     margin: auto;
     overflow: hidden;
-    border: 1px solid green; }
+    padding-top: 20px; }
     .main-content #inner .filter-box {
       overflow: hidden; }
       .main-content #inner .filter-box .filter-wrapper {
@@ -7768,15 +7787,26 @@ a.button {
           background-color: #99CAE3;
           background-color: #199ce1;
           font-weight: 700; }
+    .main-content #inner .section-container .section-title {
+      margin: 0 0 0 20px;
+      font-size: 18px;
+      color: white;
+      text-transform: uppercase;
+      line-height: 40px;
+      font-weight: 700; }
     .main-content #inner .data-container {
       padding: 0 0 0 20px;
       overflow: hidden;
       white-space: nowrap;
       overflow-x: scroll;
-      height: 395px;
-      border: 1px solid green; }
+      height: 395px; }
+      .main-content #inner .data-container .data-box.active {
+        background-color: #0b1b2d;
+        border: 1px solid #253446;
+        width: 800px !important;
+        padding: 20px !important; }
       .main-content #inner .data-container .data-box {
-        height: 395px;
+        height: 400px;
         width: 204px;
         display: inline-block;
         margin-right: 15px;
@@ -7785,6 +7815,29 @@ a.button {
         .main-content #inner .data-container .data-box .left {
           width: 204px;
           float: left; }
+        .main-content #inner .data-container .data-box .right {
+          width: 534px;
+          height: 305px;
+          float: left;
+          margin-left: 20px; }
+          .main-content #inner .data-container .data-box .right iframe {
+            width: 100%;
+            float: left;
+            height: 100%; }
+          .main-content #inner .data-container .data-box .right .cast {
+            width: 100%;
+            height: 65px;
+            color: #D7D5D6;
+            line-height: 25px;
+            font-size: 18px;
+            text-align: center;
+            word-wrap: break-word;
+            overflow: hidden;
+            white-space: normal;
+            padding-top: 10px;
+            margin: 0; }
+            .main-content #inner .data-container .data-box .right .cast span {
+              font-weight: 700; }
         .main-content #inner .data-container .data-box .data-date {
           position: absolute;
           bottom: 110px;
@@ -7801,8 +7854,8 @@ a.button {
         .main-content #inner .data-container .data-box .data-image {
           width: 204px;
           height: 305px;
-          background-size: cover;
-          background-size: 204px 305px; }
+          background-size: 204px 305px;
+          object-fit: cover; }
         .main-content #inner .data-container .data-box .data-title {
           height: 65px;
           color: #D7D5D6;

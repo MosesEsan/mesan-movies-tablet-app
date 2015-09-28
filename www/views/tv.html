@@ -1,0 +1,21 @@
+<ion-view view-title="TV">
+    <ion-content class="main-content" style="overflow-y: auto !important;">
+        <div id="inner">
+            <div class="section-container" ng-repeat="menu in dataService.menuOptions">
+                <h1 class="section-title">{{menu.name}}</h1>
+                <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container" disable-side-menu>
+
+                    <div class="data-box" ng-repeat="tvShow in dataService.tvShows[menu.endpoint] | orderBy: 'release_date'"
+                         ng-click="selectMovie(tvShow.id, $index)">
+
+                        <section class="left">
+                            <!--<section class="data-date"><p>{{tvShow.first_air_date | amDateFormat:'MMMM Do'}}</p></section>-->
+                            <section class="data-image" style="background-image: url({{IMG_URL+tvShow.poster_path}})"></section>
+                            <p class="data-title">{{tvShow.name}}</p>
+                        </section>
+                    </div>
+                </ion-scroll>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,31 +1,30 @@
 /**
- * Created by mosesesan on 19/09/15.
+ * Created by mosesesan on 28/09/15.
  */
 
-angular.module('movies', ['MoviesDataService'])
+angular.module('tv', ['TVDataService'])
     .config(function($stateProvider) {
 
         $stateProvider
             // Main Page
-            .state('movies', {
-                url: '/movies',
-                controller: 'MoviesController',
-                templateUrl: 'views/movies.html'
+            .state('tv', {
+                url: '/tv',
+                controller: 'TVController',
+                templateUrl: 'views/tv.html'
             })
     })
 
-    .controller("MoviesController", function ($scope, $rootScope, moviesDataService, IMG_URL, $state) {
-        $scope.dataService = moviesDataService;
+    .controller("TVController", function ($scope, $rootScope, tvDataService, IMG_URL, $state) {
+        $scope.dataService = tvDataService;
         $scope.IMG_URL = IMG_URL;
-        $scope.selectedMovie = 0;
         $scope.all_actors = "";
 
-        $scope.getMovieInfo = function(movieID, index){
-            console.log(movieID)
-            dataService.getMovieInfo(movieID, index);
+        $scope.getMovieInfo = function(tvShowID, index){
+            console.log(tvShowID)
+            //dataService.getTVShowInfo(tvShowID, index);
         }
 
-        $scope.selectMovie = function(id, index){
+        $scope.selectTVShow = function(id, index){
             $scope.selectedMovie = id;
             $scope.all_actors = "";
 
@@ -77,30 +76,6 @@ angular.module('movies', ['MoviesDataService'])
                 }
             }
         }
-
-
-        //for (var  i = 0; i < result.length; i++){
-        //    console.log(IMG_URL+result[i].poster_path)
-        //}
-        //dataService.getData()
-        //    .then(
-        //    function (result) {
-        //        // promise was fullfilled (regardless of outcome)
-        //        // checks for information will be peformed here
-        //        var data = result.data;
-        //
-        //        var totalPages = data.total_pages;
-        //        var result = data.results;
-        //        console.log(data)
-        //        console.log(result)
-        //
-        //
-        //    },
-        //    function (error) {
-        //        // handle errors here
-        //        console.log(error.statusText);
-        //    }
-        //);
     });
 
 

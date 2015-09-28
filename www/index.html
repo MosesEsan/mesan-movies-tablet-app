@@ -15,6 +15,7 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/ngstorage/ngStorage.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/angular-moment/angular-moment.js"></script>
@@ -23,116 +24,39 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
-    <script src="js/dataService.js"></script>
+    <script src="js/movies.js"></script>
+    <script src="js/tv.js"></script>
+    <script src="js/moviesService.js"></script>
+    <script src="js/tvService.js"></script>
 </head>
-<body ng-app="starter" ng-controller="movieController">
+<body ng-app="starter">
 
-<div class="top-header row">
-    <div class="col-50">
-        <section class="logo">
-            <!--<img ng-src= "img/movie_icon.png">-->
-        </section>
+<div class="top-header">
+    <div class="row">
+        <div class="col-50">
+            <section class="logo">
+                <!--<img ng-src= "img/movie_icon.png">-->
+            </section>
 
-        <section class="section-title"><p>Movies</p></section>
+            <div class="menu-container">
+                <section ng-repeat="view in views" ng-class="{'active': currentState === view.toLowerCase()}" ui-sref="{{view.toLowerCase()}}" nav-transition="ios">{{view}}</section>
+            </div>
+            <!--<section class="section-title"><p>Movies</p></section>-->
 
-    </div>
-    <div class="col-50">
+        </div>
+        <div class="col-50">
 
-        <div class="search-box"></div>
+            <div class="search-box"></div>
 
+        </div>
     </div>
 </div>
 
-<ion-content class="main-content">
-    <div id="inner">
-        <!--<div class="filter-box">-->
-        <!--<section class="filter-wrapper">-->
-        <!--<button ng-repeat="menu in menuOptions" ng-class="{'active' : currentOption.name === menu.name}" ng-click="changeMenuOption(menu)">{{menu.name}}</button>-->
-        <!--</section>-->
-        <!--</div>-->
-        <div class="section-container" ng-repeat="menu in menuOptions">
-            <h1 class="section-title">{{menu.name}}</h1>
-            <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container">
-
-                <div class="data-box" ng-repeat="movie in dataService.movies[menu.endpoint] | orderBy: 'release_date'"
-                     ng-click="selectMovie(movie.id, $index)" ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}">
-
-                    <section class="left">
-                        <section class="data-date"><p>{{movie.release_date | amDateFormat:'MMMM Do'}}</p></section>
-                        <section class="data-image" style="background-image: url({{IMG_URL+movie.poster_path}})"></section>
-                        <p class="data-title">{{movie.title}}</p>
-                    </section>
-
-                    <section class="right" ng-show="selectedMovie === movie.id">
-
-                        <!--<iframe scr="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1"></iframe>-->
-                        <iframe src="" id="trailer_{{movie.id}}">
-                            <p>Your browser does not support iframes.</p>
-                        </iframe>
-                        <p class="cast"><span>Cast: </span>{{all_actors}}</p>
-
-
-                    </section>
-                </div>
-            </ion-scroll>
-        </div>
-    </div>
-</ion-content>
+<ion-nav-view animation="slide-left-right"></ion-nav-view>
 </body>
 </html>
 
 <style>
-    .section-container{
-        border: 1px solid green;
-        margin-top: 10px;
-    }
-    .section-title{
-        margin: 0 0 0 20px;
-        font-size: 18px;
-        color: white;
-        text-transform: uppercase;
-        line-height: 40px;
-        font-weight: 700;
-    }
-    .data-box{
-        height: 400px !important;
-    }
-    .data-box.active {
-        background-color: #0b1b2d;
-        border: 1px solid #253446;
-        width: 800px !important;
-        padding: 20px!important;
-    }
 
-    .right {
-        width: 534px;
-        height: 305px;
-        float: left;
-        margin-left: 20px;
-    }
-
-    iframe{
-        width: 100%;
-        float: left;
-        height: 100%;
-    }
-
-    .cast{
-        width: 100%;
-        height: 65px;
-        color: #D7D5D6;
-        line-height: 25px;
-        font-size: 18px;
-        text-align: center;
-        word-wrap: break-word;
-        overflow: hidden;
-        white-space: normal;
-        padding-top: 10px;
-        margin: 0;
-    }
-    
-    .cast span{
-        font-weight: 700;
-    }
 
 </style>

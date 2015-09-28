@@ -1,0 +1,15 @@
+{
+  "Movies" :
+  [
+    {"name" : "Now Playing", "endpoint": "now_playing"},
+    {"name" : "Upcoming Movies", "endpoint": "upcoming"},
+    {"name" : "Popular Movies", "endpoint": "popular"}
+  ],
+  "TV" :
+  [
+    {"name" : "On The Air", "endpoint": "on_the_air"},
+    {"name" : "Top Rated", "endpoint": "top_rated"},
+    {"name" : "Popular Shows", "endpoint": "popular"}
+  ]
+}
+
