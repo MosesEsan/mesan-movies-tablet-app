@@ -6,12 +6,32 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
 
     this.movies = {};
     var self = this;
+    this.categories = [];
     this.menuOptions = [];
+
+    $http.get('data.json').success(function (data){
+        self.menuOptions = data["Movies"];
+        self.categories = data["Movies"].clone();
+        self.categories.splice(0,1);
+        var cachedData = $localStorage.cached_data; //get local cached storage data
+        if (cachedData === undefined){
+            $localStorage.cached_data = {};
+            self.getData();
+        }else if(cachedData.movies === undefined) {
+            self.getData();
+        }else{
+            self.movies = cachedData.movies;
+            var last_updated = cachedData.last_updated; //check last updated date
+            if (last_updated === null || last_updated === undefined || self.getTimeDiff(last_updated) >= 1){
+                self.getData();
+            }
+        }
+    });
 
     this.getData = function(){
         var promises = [];
 
-        for(var i = 0; i < this.menuOptions.length; i++){
+        for(var i = 1; i < this.menuOptions.length; i++){
             var promise = $http({method: 'GET', url: MOVIES_API_URL+self.menuOptions[i].endpoint+'?api_key='+API_KEY, cache: 'true'});
             promises.push(promise);
             console.log(MOVIES_API_URL+self.menuOptions[i].endpoint+'?api_key='+API_KEY)
@@ -21,7 +41,7 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
             console.log(data)
             for (var i = 0; i < data.length; i++){
                 if (typeof data[i].data === 'object') {
-                    var endpoint = self.menuOptions[i].endpoint;
+                    var endpoint = self.menuOptions[i + 1].endpoint;
                     self.movies[endpoint] = data[i].data.results;
                 }
             }
@@ -84,27 +104,14 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
 
     //Initialise, call the api to get the data
     this.initialize = function(){
-
-        $http.get('data.json').success(function (data){
-            self.menuOptions = data["Movies"];
-            var cachedData = $localStorage.cached_data; //get local cached storage data
-            if (cachedData === undefined){
-                $localStorage.cached_data = {};
-                self.getData();
-            }else if(cachedData.movies === undefined) {
-                self.getData();
-            }else{
-                self.movies = cachedData.movies;
-                var last_updated = cachedData.last_updated; //check last updated date
-                if (last_updated === null || last_updated === undefined || self.getTimeDiff(last_updated) >= 1){
-                    self.getData();
-                }
-            }
-        });
     };
 
     //Call the initialize function to retrieve the data
     this.initialize();
+
+    Array.prototype.clone = function() {
+        return this.slice(0);
+    };
 
 }
 

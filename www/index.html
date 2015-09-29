@@ -31,20 +31,31 @@
 </head>
 <body ng-app="starter">
 
-<ion-header-bar align-title="left" class="bar-light">
-    <div class="buttons">
-        <button class="button" ng-click="doSomething()">Left Button</button>
-    </div>
-    <h1 class="title">Title!</h1>
-    <div class="buttons">
-        <button class="button">Right Button</button>
-    </div>
-</ion-header-bar>
+<ion-side-menus enable-menu-with-back-views="true" >
 
-<ion-header-bar class="bar bar-subheader menu-container">
-    <section ng-repeat="view in views" ng-class="{'active': currentState === view.toLowerCase()}" ui-sref="{{view.toLowerCase()}}" nav-transition="ios">{{view}}</section>
-</ion-header-bar>
+    <!-- Center content -->
+    <ion-side-menu-content drag-content="false">
+        <!-- The nav bar that will be updated as we navigate -->
+        <!--<ion-nav-bar> </ion-nav-bar>-->
+        <!-- where the initial view template will be rendered -->
+        <ion-nav-view animation="slide-left-right" name="main"></ion-nav-view>
 
+    </ion-side-menu-content>
+
+    <!-- Left menu -->
+    <ion-side-menu side="left" expose-aside-when="large" class="side-menu-c" width="90">
+
+        <div id="parent"> 
+            <div id="child">
+                <button ng-repeat="view in views" ui-sref="{{view.toLowerCase()}}/discover"></button>
+            </div> 
+        </div>
+
+
+
+    </ion-side-menu>
+
+</ion-side-menus>
 
 
 
@@ -68,11 +79,22 @@
 
 <!--</div>-->
 
-<ion-nav-view animation="slide-left-right"></ion-nav-view>
 </body>
 </html>
 
 <style>
 
-
+.side-menu-c{
+    border: 1px solid green;
+    background-color: rgb(39,156,219);
+    background-color: rgb(27,47,65);
+}
+#parent {position: relative; height: 100%}
+#child { position: absolute; top: 0; bottom: 0; left: 0; right: 0;  height: 30%; margin: auto; }
+    
+    #child button{
+        border: 1px solid green;
+        width: 50px;
+        height: 50px;
+    }
 </style>

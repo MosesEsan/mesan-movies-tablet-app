@@ -1,6 +1,7 @@
 {
   "Movies" :
   [
+    {"name" : "Discover", "endpoint": ""},
     {"name" : "Now Playing", "endpoint": "now_playing"},
     {"name" : "Upcoming Movies", "endpoint": "upcoming"},
     {"name" : "Popular Movies", "endpoint": "popular"}

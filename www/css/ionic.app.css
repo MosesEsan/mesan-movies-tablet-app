@@ -7700,31 +7700,33 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-body {
+.pane {
   background-image: url("../img/background.png") !important;
   background-repeat: no-repeat;
   background-size: cover; }
 
+ion-header-bar {
+  color: white;
+  background: transparent !important; }
+
 .menu-container {
-  height: 44px;
+  height: 45px;
   width: 100%;
   padding-left: 20px;
-  background-color: yellow;
-  background-image: url("../img/background.png") !important;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background: transparent !important; }
   .menu-container section {
     height: 40px;
-    min-width: 110px;
+    /* min-width: 110px; */
     float: left;
     margin-right: 10px;
-    font-size: 17px;
+    font-size: 16px;
     color: white;
     text-transform: uppercase;
     line-height: 40px;
     font-weight: 700;
-    padding: 0 10px 10px;
-    text-align: center; }
+    /* padding: 0 10px 10px; */
+    /* text-align: center; */
+    margin-right: 30px; }
   .menu-container section.active {
     border-bottom: 3px solid #B62E38;
     border-bottom: 3px solid #199ce1; }
@@ -7768,7 +7770,7 @@ body {
           font-weight: 700; }
     .main-content #inner .section-container .section-title {
       margin: 0 0 0 20px;
-      font-size: 17px;
+      font-size: 15px;
       color: white;
       text-transform: uppercase;
       line-height: 35px;
@@ -7778,7 +7780,7 @@ body {
       overflow: hidden;
       white-space: nowrap;
       overflow-x: scroll;
-      height: 375px;
+      height: 325px;
       margin-top: 10px; }
       .main-content #inner .data-container .data-box.active {
         background-color: #0b1b2d;
@@ -7786,15 +7788,16 @@ body {
         width: 800px !important;
         padding: 20px !important; }
       .main-content #inner .data-container .data-box {
-        height: 400px;
-        width: 204px;
+        width: 180px;
+        height: 320px;
         display: inline-block;
-        margin-right: 15px;
+        margin-right: 10px;
         overflow: hidden;
         padding: 0; }
         .main-content #inner .data-container .data-box .left {
           width: 204px;
-          float: left; }
+          float: left;
+          position: relative; }
         .main-content #inner .data-container .data-box .right {
           width: 534px;
           height: 305px;
@@ -7820,32 +7823,33 @@ body {
               font-weight: 700; }
         .main-content #inner .data-container .data-box .data-date {
           position: absolute;
-          bottom: 110px;
+          bottom: 80px;
           background-color: #B62E38;
-          padding: 15px;
-          margin-left: 10px;
+          padding: 12px;
+          left: 10px;
           opacity: 0.9; }
           .main-content #inner .data-container .data-box .data-date p {
-            font-size: 17px;
+            font-size: 13px;
             color: white;
             line-height: 10px;
             margin: 0;
             font-weight: 700; }
         .main-content #inner .data-container .data-box .data-image {
-          width: 204px;
-          height: 305px;
+          width: 180px;
+          height: 270px;
           background-size: 204px 305px;
           object-fit: cover; }
         .main-content #inner .data-container .data-box .data-title {
-          height: 65px;
+          height: 50px;
+          width: 180px;
           color: #D7D5D6;
-          line-height: 25px;
-          font-size: 18px;
+          line-height: 21px;
+          font-size: 16px;
           text-align: center;
           word-wrap: break-word;
           overflow: hidden;
           white-space: normal;
-          padding-top: 10px;
+          padding-top: 5px;
           margin: 0; }
     .main-content #inner .filter-options {
       border: 1px solid blue;

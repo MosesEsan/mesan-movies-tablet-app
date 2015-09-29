@@ -8,7 +8,7 @@ angular.module('starter', ['ionic', 'ui.router', 'myApp.config', 'angularMoment'
     .config(function($stateProvider, $urlRouterProvider) {
 
         // For any unmatched url, redirect to /movies
-        $urlRouterProvider.otherwise("/movies");
+        $urlRouterProvider.otherwise("/movies/discover");
 
     })
     .run(function($ionicPlatform, $rootScope) {
@@ -29,6 +29,7 @@ angular.module('starter', ['ionic', 'ui.router', 'myApp.config', 'angularMoment'
 
         $rootScope.$on('$stateChangeStart',
             function(event, toState, toParams, fromState, fromParams){
+                console.log(toState)
                 $rootScope.currentState = toState.name;
             })
     })
