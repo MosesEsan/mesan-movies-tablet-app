@@ -40,6 +40,7 @@
         <!-- where the initial view template will be rendered -->
         <ion-nav-view animation="slide-left-right" name="main"></ion-nav-view>
 
+
     </ion-side-menu-content>
 
     <!-- Left menu -->
@@ -78,6 +79,15 @@
     <!--</div>-->
 
 <!--</div>-->
+<div class="side-menu-container">
+    <div id="parent">
+        <div id="child">
+            <button ng-repeat="view in views"
+                    ng-class="{'active': currentState === view.toLowerCase()}" ui-sref="{{view.toLowerCase()}}">
+                {{view}}
+            </button>
+        </div>
+    </div>
 
 </body>
 </html>
