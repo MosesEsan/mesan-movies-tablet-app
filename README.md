@@ -27,3 +27,7 @@ Tutorial: https://developers.google.com/web/tools/setup/device-testing/devtools-
 Select as iPad the device, demo can also be tested on browser.
 
 https://dl.dropboxusercontent.com/u/49143627/MEP/www/index.html
+
+<b><u>Snapshot</u></b>
+![alt tag](https://github.com/MosesEsan/MEP/blob/master/Screen%20Shot%202015-09-30%20at%2013.51.30.png)
+
