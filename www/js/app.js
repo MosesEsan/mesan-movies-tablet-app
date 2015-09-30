@@ -8,12 +8,14 @@ angular.module('starter', ['ionic', 'ui.router', 'myApp.config', 'angularMoment'
     .config(function($stateProvider, $urlRouterProvider) {
 
         // For any unmatched url, redirect to /movies
-        $urlRouterProvider.otherwise("/movies/discover");
+        $urlRouterProvider.otherwise("/movies");
 
     })
     .run(function($ionicPlatform, $rootScope) {
 
-        $rootScope.views = ["Movies", "TV"];
+        $rootScope.views = [
+            {name: "Movies", icon: "movie_icon.ico"},
+            {name: "TV", icon: "tv_icon.ico"}];
 
 
         $ionicPlatform.ready(function() {

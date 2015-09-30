@@ -8,19 +8,9 @@ angular.module('movies', ['MoviesDataService'])
         $stateProvider
             // Main Page
             .state('movies', {
-                abstract: true,
                 url: '/movies',
                 views: {
                     'main': {
-                        template: '<ion-nav-view name="movies" animation="slide-left-right"></ion-nav-view>'
-                    }
-                }
-            })
-
-            .state('movies.discover', {
-                url: '/discover',
-                views: {
-                    'movies': {
                         controller: 'MoviesController',
                         templateUrl: 'views/movies.html'
                     }

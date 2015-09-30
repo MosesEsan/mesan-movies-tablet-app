@@ -34,7 +34,6 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
         for(var i = 1; i < this.menuOptions.length; i++){
             var promise = $http({method: 'GET', url: MOVIES_API_URL+self.menuOptions[i].endpoint+'?api_key='+API_KEY, cache: 'true'});
             promises.push(promise);
-            console.log(MOVIES_API_URL+self.menuOptions[i].endpoint+'?api_key='+API_KEY)
         }
 
         $q.all(promises).then(function(data){
@@ -102,17 +101,9 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
         return hourDiff;
     };
 
-    //Initialise, call the api to get the data
-    this.initialize = function(){
-    };
-
-    //Call the initialize function to retrieve the data
-    this.initialize();
-
     Array.prototype.clone = function() {
         return this.slice(0);
     };
-
 }
 
 

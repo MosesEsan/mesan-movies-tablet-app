@@ -8,6 +8,7 @@
   ],
   "TV" :
   [
+    {"name" : "Discover", "endpoint": ""},
     {"name" : "On The Air", "endpoint": "on_the_air"},
     {"name" : "Top Rated", "endpoint": "top_rated"},
     {"name" : "Popular Shows", "endpoint": "popular"}

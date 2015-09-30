@@ -9,8 +9,12 @@ angular.module('tv', ['TVDataService'])
             // Main Page
             .state('tv', {
                 url: '/tv',
-                controller: 'TVController',
-                templateUrl: 'views/tv.html'
+                views: {
+                    'main': {
+                        controller: 'TVController',
+                        templateUrl: 'views/tv.html'
+                    }
+                }
             })
     })
 
@@ -77,5 +81,20 @@ angular.module('tv', ['TVDataService'])
             }
         }
     });
+
+
+
+//abstract: true,
+//template: '<ion-nav-view name="tv" animation="slide-left-right"></ion-nav-view>'
+
+//.state('mep.tv.discover', {
+//    url: '/discover',
+//    views: {
+//        'tv': {
+//            controller: 'TVController',
+//            templateUrl: 'views/tv.html'
+//        }
+//    }
+//})
 
 
