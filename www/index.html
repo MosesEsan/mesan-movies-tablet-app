@@ -44,40 +44,13 @@
 
     <!-- Left menu -->
     <ion-side-menu side="left" expose-aside-when="large" class="side-menu-c" width="90">
-
-        <div id="parent"> 
+        <div id="parent">
             <div id="child">
-                <button ng-repeat="view in views" ui-sref="{{view.toLowerCase()}}/discover"></button>
-            </div> 
+                <button ng-repeat="view in views" ui-sref="{{view.name.toLowerCase()}}" style="background: url('img/{{view.icon}}')"></button>
+            </div>
         </div>
-
-
-
     </ion-side-menu>
-
 </ion-side-menus>
-
-
-
-
-<!--<div class="top-header">-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-50">-->
-    <!--<section class="logo">-->
-    <!--&lt;!&ndash;<img ng-src= "img/movie_icon.png">&ndash;&gt;-->
-    <!--</section>-->
-    <!--&lt;!&ndash;<section class="section-title"><p>Movies</p></section>&ndash;&gt;-->
-
-    <!--</div>-->
-    <!--<div class="col-50">-->
-
-    <!--<div class="search-box"></div>-->
-
-    <!--</div>-->
-    <!--</div>-->
-
-<!--</div>-->
 
 </body>
 </html>
@@ -85,16 +58,21 @@
 <style>
 
 .side-menu-c{
-    border: 1px solid green;
     background-color: rgb(39,156,219);
     background-color: rgb(27,47,65);
 }
 #parent {position: relative; height: 100%}
-#child { position: absolute; top: 0; bottom: 0; left: 0; right: 0;  height: 30%; margin: auto; }
-    
+#child { position: absolute; top: 0; bottom: 0; left: 0; right: 0;  height: 150px; margin: auto; padding: 0 10px;
+     }
+
     #child button{
-        border: 1px solid green;
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 8px;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: 45px 45px !important;
+        border: none;
+
     }
 </style>

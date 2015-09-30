@@ -5,12 +5,30 @@
 TVDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, TV_API_URL) {
 
     this.tvShows = {};
-    var deferred = $q.defer();// deferred contains the promise to be returned
     var self = this;
+    this.categories = [];
     this.menuOptions = [];
 
-    this.getData = function(){
+    $http.get('data.json').success(function (data){
+        self.menuOptions = data["TV"];
+        self.categories = data["TV"].clone();
+        self.categories.splice(0,1);
+        var cachedData = $localStorage.cached_data; //get local cached storage data
+        if (cachedData === undefined){
+            $localStorage.cached_data = {};
+            self.getData();
+        }else if(cachedData.tvShows === undefined) {
+            self.getData();
+        }else{
+            self.tvShows = cachedData.tvShows;
+            var last_updated = cachedData.last_updated; //check last updated date
+            if (last_updated === null || last_updated === undefined || self.getTimeDiff(last_updated) >= 1){
+                self.getData();
+            }
+        }
+    });
 
+    this.getData = function(){
         var promises = [];
 
         for(var i = 0; i < self.menuOptions.length; i++){
@@ -39,30 +57,9 @@ TVDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, TV_API_URL) {
         return hourDiff;
     };
 
-    //Initialise, call the api to get the data
-    this.initialize = function(){
-
-        $http.get('data.json').success(function (data){
-            self.menuOptions = data["TV"];
-            var cachedData = $localStorage.cached_data; //get local cached storage data
-            if (cachedData === undefined){
-                $localStorage.cached_data = {};
-                self.getData();
-            }else if(cachedData.tvShows === undefined) {
-                self.getData();
-            }else{
-                self.tvShows = cachedData.tvShows;
-                var last_updated = cachedData.last_updated; //check last updated date
-                if (last_updated === null || last_updated === undefined || self.getTimeDiff(last_updated) >= 1){
-                    self.getData();
-                }
-            }
-        });
+    Array.prototype.clone = function() {
+        return this.slice(0);
     };
-
-    //Call the initialize function to retrieve the data
-    this.initialize();
-
 }
 
 

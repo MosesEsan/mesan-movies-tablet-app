@@ -7837,7 +7837,7 @@ ion-header-bar {
         .main-content #inner .data-container .data-box .data-image {
           width: 180px;
           height: 270px;
-          background-size: 204px 305px;
+          background-size: 180px 270px;
           object-fit: cover; }
         .main-content #inner .data-container .data-box .data-title {
           height: 50px;
