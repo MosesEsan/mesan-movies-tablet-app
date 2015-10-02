@@ -29,5 +29,10 @@ Select iPad as the device, demo can also be tested on browser.
 https://dl.dropboxusercontent.com/u/49143627/MEP/www/index.html
 
 <b><u>Snapshot</u></b>
-![alt tag](https://github.com/MosesEsan/MEP/blob/master/Screen%20Shot%202015-09-30%20at%2013.51.30.png)
+<ul>
+  <li><b><u>Movie Page</u></b><br>![alt tag](https://github.com/MosesEsan/MEP/blob/master/Movies.png)</li>
+  <li><b><u>Movie Detail Page</u></b><br>![alt tag](https://github.com/MosesEsan/MEP/blob/master/Movie%20Detail.png)</li>
+  <li>More Snapshots coming soon...</li>
+</ul>
+
 
