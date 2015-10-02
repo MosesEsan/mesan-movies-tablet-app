@@ -47,7 +47,10 @@
     <ion-side-menu side="left" expose-aside-when="large" class="side-menu-c" width="90">
         <div id="parent">
             <div id="child">
-                <button ng-repeat="view in views" ui-sref="{{view.name.toLowerCase()}}" style="background: url('img/{{view.icon}}')"></button>
+                <button ng-repeat="view in views"
+                        ui-sref="{{view.name.toLowerCase()}}"
+                        ng-class="{'active' : view.name.toLowerCase() === currentState}"
+                        style="background: url('img/{{view.icon}}'); border-color: {{view.color}}"></button>
             </div>
         </div>
     </ion-side-menu>
@@ -55,25 +58,3 @@
 
 </body>
 </html>
-
-<style>
-
-.side-menu-c{
-    background-color: rgb(39,156,219);
-    background-color: rgb(27,47,65);
-}
-#parent {position: relative; height: 100%}
-#child { position: absolute; top: 0; bottom: 0; left: 0; right: 0;  height: 150px; margin: auto; padding: 0 10px;
-     }
-
-    #child button{
-        width: 70px;
-        height: 70px;
-        margin-bottom: 8px;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        background-size: 45px 45px !important;
-        border: none;
-
-    }
-</style>

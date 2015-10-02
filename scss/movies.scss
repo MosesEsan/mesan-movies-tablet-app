@@ -4,53 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-//.top-header{
-//  height: 80px;
-//  padding: 10px 10px 0 10px;
-//  background-color: #0b1b2d;
-//  border-bottom: 1px solid #D7D5D6;;
-//
-//  .logo, .section-title, .search-box{
-//    height: 50px;
-//  }
-//
-//  .logo, .section-title{
-//    float: left;
-//  }
-//
-//  .logo{
-//    border: 1px solid rgb(60,77,95);
-//    width: 50px;
-//    overflow: hidden;
-//    border-radius: 50%;
-//    margin-right: 15px;
-//
-//    img{
-//      height: 100%;
-//    }
-//  }
-//
-//  .section-title{
-//    width: 150px;;
-//    margin-left: 15px;
-//
-//    p{
-//      font-size: 17px;
-//      line-height: 50px;
-//      color: white;
-//      font-weight: 700;
-//      text-transform: uppercase;
-//      margin: 0;
-//    }
-//  }
-//
-//  .search-box{
-//    border: 1px solid purple;
-//    width: 150px;
-//    float: right;
-//  }
-//
-//}
+
 ion-header-bar{
   color: white;
   background: transparent !important;
@@ -95,7 +49,6 @@ ion-header-bar{
     height: 100%;
   }
 
-
   #inner{
     width: 100%;
     margin: auto;
@@ -111,7 +64,6 @@ ion-header-bar{
         margin-right: auto;
         overflow: hidden;
 
-
         button{
           width: 175px;
           height: 55px;
@@ -126,7 +78,6 @@ ion-header-bar{
           border-top: 1px solid rgb(49,63,93);
           border-top-width: 2px;
           font-size: 14px;
-
         }
 
         button.active{
@@ -138,7 +89,6 @@ ion-header-bar{
     }
 
     .section-container{
-
       .section-title{
         margin: 0 0 0 20px;
         font-size: 15px;
@@ -228,7 +178,6 @@ ion-header-bar{
         .data-image{
           width: 180px;
           height: 270px;
-          background-size: 180px 270px;
           object-fit: cover;
         }
 
@@ -248,11 +197,286 @@ ion-header-bar{
       }
     }
 
-    .filter-options{
-      border: 1px solid blue;
-      height: 70px;
-    }
   }
 }
 
+
+
+//Details Page
+.movie-details-modal{
+  width: 100%;
+  left: 0;
+  height: 100%;
+  bottom: 0;
+  overflow: hidden;
+  top: 0;
+
+
+  .movie-modal-header {
+    height: 50px;
+    background-color: #3D3C3C !important;
+    color: #ffffff;
+
+    h1{
+      color: #ffffff;
+      font-size: 23px;
+      line-height: 50px;
+      font-weight: 700;
+    }
+
+    button{
+      float: right;
+      position: absolute;
+      right: 20px;
+      color: white;
+      background: none;
+      border: none;
+      font-size: 29px;
+      top: 2px;
+    }
+  }
+
+  //.scroll{
+  //  height: 100%;
+  //}
+
+  .movie-modal-content{
+    background-size: contain !important;
+
+    .details-wrapper{
+      overflow: hidden;
+      background-color: rgba(0,0,0,0.4);
+
+      .trailer-box{
+        height: 25px;
+        margin-top: 40px;
+        padding: 0px 10px 0px 20px;
+
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+        iframe{
+          height: 480px;
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .trailers-list a{
+          font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+          font-size: 22px;
+          color: #ffffff;
+          margin-left: 10px;
+          text-decoration: underline;
+        }
+
+        .trailers-list a.active{
+          color: #289FC3;
+        }
+      }
+
+      .trailer-box.active{
+        height: 535px;
+      }
+
+      .info-box{
+        padding: 35px 20px 20px 30px;
+        overflow: hidden;
+
+        .poster-wrapper{
+          width: 250px;
+          float: left;
+
+          .poster{
+            width: 250px;
+            height: 375px;
+            object-fit: cover;
+          }
+
+          .trailer{
+            margin-top: 10px;
+            width: 250px;
+            height: 60px;
+            background-color: #289FC3;
+            color: #ffffff;
+            font-size: 25px;
+            /* font-weight: 700; */
+            border: none;
+            border-radius: 7px;
+          }
+        }
+
+        .movie-info{
+          float: left;
+          margin-left: 30px;
+          width: 70%;
+
+          h1{
+            color: #fff;
+            height: 45px;
+          }
+
+          section{
+            display: block;
+            overflow: hidden;
+
+            div{
+              float: left;
+              margin-right: 25px;
+              p{
+                color: #fff;
+                line-height: 31px;
+                font-size: 21px;
+                margin: 0;
+                font-weight: 500;
+              }
+
+              p.rating,
+              p.release-date,
+              p.runtime{
+                line-height: 34px;
+                font-size: 25px;
+                font-weight: 700;
+              }
+            }
+          }
+
+          p.tagline{
+            line-height: 30px;
+            color: white;
+            margin-top: 10px;
+            font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+            font-size: 1.5em;
+            font-style: italic;
+            padding-bottom: .25em;
+            text-shadow: 0 0 1px #FFF;
+          }
+
+          p.synopsis{
+            color: #fff;
+            line-height: 30px;
+            font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+            font-size: 1.5em;
+            padding-bottom: .25em;
+            text-shadow: 0 0 1px #FFF;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      .similar-box{
+        padding: 0px 0px 20px 30px;
+        overflow: hidden;
+
+        h1{
+          margin: 0;
+          font-size: 20px;
+          color: white;
+          text-transform: uppercase;
+          line-height: 39px;
+          font-weight: 700;
+        }
+
+        .data-container{
+          padding: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          overflow-x: scroll;
+          height: 325px;
+          margin-top: 10px;
+
+          .data-box.active {
+            background-color: #0b1b2d;
+            border: 1px solid #253446;
+            width: 800px !important;
+            padding: 20px!important;
+          }
+
+          .data-box{
+            width: 180px;
+            height: 320px;
+            display: inline-block;
+            margin-right: 10px;
+            overflow:hidden;
+            padding: 0;
+
+
+            .left{
+              width: 204px;
+              float: left;
+              position: relative;
+            }
+
+            .right {
+              width: 534px;
+              height: 305px;
+              float: left;
+              margin-left: 20px;
+
+              iframe{
+                width: 100%;
+                float: left;
+                height: 100%;
+              }
+
+              .cast{
+                width: 100%;
+                height: 65px;
+                color: #D7D5D6;
+                line-height: 25px;
+                font-size: 18px;
+                text-align: center;
+                word-wrap: break-word;
+                overflow: hidden;
+                white-space: normal;
+                padding-top: 10px;
+                margin: 0;
+                span{
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .data-date{
+              position: absolute;
+              bottom: 80px;
+              background-color: #B62E38;
+              padding: 12px;
+              left: 10px;
+              opacity: 0.9;
+
+              p{
+                font-size: 13px;
+                color: white;
+                line-height: 10px;
+                margin: 0;
+                font-weight: 700;
+              }
+            }
+            .data-image{
+              width: 180px;
+              height: 270px;
+              object-fit: cover;
+            }
+
+            .data-title{
+              height: 50px;
+              width: 180px;
+              color: #D7D5D6;
+              line-height: 21px;
+              font-size: 16px;
+              text-align: center;
+              word-wrap: break-word;
+              overflow: hidden;
+              white-space: normal;
+              padding-top: 5px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
 

@@ -24,7 +24,7 @@ Hybrid App to demonstrate my web development skills. I will be developing the ap
 Test with Chrome Developer Mobile Emulator Tool. 
 Tutorial: https://developers.google.com/web/tools/setup/device-testing/devtools-emulator
 
-Select as iPad the device, demo can also be tested on browser.
+Select iPad as the device, demo can also be tested on browser.
 
 https://dl.dropboxusercontent.com/u/49143627/MEP/www/index.html
 

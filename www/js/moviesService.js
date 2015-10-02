@@ -9,6 +9,8 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
     this.categories = [];
     this.menuOptions = [];
 
+    console.log()
+
     $http.get('data.json').success(function (data){
         self.menuOptions = data["Movies"];
         self.categories = data["Movies"].clone();
@@ -52,47 +54,47 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
         return $q.all(promises);
     };
 
-    this.getMovieInfo = function(movieID, index, endpoint){
+    this.getMovieInfo = function(endpoint, index){
 
         var deferred2 = $q.defer();// deferred contains the promise to be returned
+        var movieID = self.movies[endpoint][index].id;
 
+        console.log(movieID)
+        $http.get(MOVIES_API_URL+movieID+'?api_key='+API_KEY+'&append_to_response=releases,trailers,credits,similar')
 
-        if (!("cast" in self.movies[endpoint][index])){
-            $http.get(MOVIES_API_URL+movieID+'?api_key='+API_KEY+'&append_to_response=releases,trailers,credits,similar')
+            .then(function(response) {
+                if (typeof response.data === 'object') {
+                    deferred2.resolve(response);// to resolve (fulfill) a promise use .resolve
 
-                .then(function(response) {
-                    if (typeof response.data === 'object') {
-                        deferred2.resolve(response);// to resolve (fulfill) a promise use .resolve
+                    console.log(response.data)
+                    var countries = response.data.releases.countries;
+                    var trailers = response.data.trailers;
+                    self.movies[endpoint][index]["homepage"] = response.data.homepage;
+                    self.movies[endpoint][index]["tagline"] = response.data.tagline;
+                    self.movies[endpoint][index]["runtime"] = response.data.runtime;
+                    self.movies[endpoint][index]["cast"] = response.data.credits.cast;
+                    self.movies[endpoint][index]["crew"] = response.data.credits.crew;
+                    self.movies[endpoint][index]["similar"] = response.data.similar.results;
+                    self.movies[endpoint][index]["trailers"] = trailers.youtube;
+                    self.movies[endpoint][index]["country"]  = countries[0].iso_3166_1;
+                    self.movies[endpoint][index]["production_companies"] = response.data.production_companies;
+                    self.movies[endpoint][index]["rating"] = (countries[0].certification === "") ? "N/A" : (countries[0].certification);
 
-                        var countries = response.data.releases.countries;
-                        var trailers = response.data.trailers;
-                        self.movies[endpoint][index]["homepage"] = response.data.homepage;
-                        self.movies[endpoint][index]["tagline"] = response.data.tagline;
-                        self.movies[endpoint][index]["runtime"] = response.data.runtime;
-                        self.movies[endpoint][index]["cast"] = response.data.credits.cast;
-                        self.movies[endpoint][index]["crew"] = response.data.credits.crew;
-                        self.movies[endpoint][index]["similar"] = response.data.similar.results;
-                        self.movies[endpoint][index]["trailers"] = trailers.youtube;
-                        self.movies[endpoint][index]["country"]  = countries[0].iso_3166_1;
-                        self.movies[endpoint][index]["production_companies"] = response.data.production_companies;
-                        self.movies[endpoint][index]["rating"] = (countries[0].certification === "") ? "N/A" : (countries[0].certification);
+                    //update local data
 
-                        //update local data
-                    } else {
-                        // invalid response
-                        deferred2.reject(response.data);
-                    }
+                    console.log(self.movies[endpoint][index]["similar"])
+                } else {
+                    // invalid response
+                    deferred2.reject(response.data);
+                }
 
-                }, function(response) {
-                    // something went wrong
-                    deferred2.reject(response);// to reject a promise use .reject
-                });
+            }, function(response) {
+                // something went wrong
+                deferred2.reject(response);// to reject a promise use .reject
+            });
 
-            // promise is returned
-            return deferred2.promise;
-        }else{
-            return self.movies[endpoint][index];
-        }
+        // promise is returned
+        return deferred2.promise;
     };
 
     this.getTimeDiff = function(last_updated){

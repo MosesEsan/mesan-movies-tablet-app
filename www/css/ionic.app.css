@@ -7700,6 +7700,32 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.side-menu-c {
+  background-color: #279cdb;
+  background-color: #1b2f41; }
+  .side-menu-c #parent {
+    position: relative;
+    height: 100%; }
+    .side-menu-c #parent #child {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 150px;
+      margin: auto;
+      padding: 0 10px; }
+      .side-menu-c #parent #child button {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 8px;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: 45px 45px !important;
+        border: none; }
+      .side-menu-c #parent #child button.active {
+        border-left: 2px solid transparent; }
+
 .pane {
   background-image: url("../img/background.png") !important;
   background-repeat: no-repeat;
@@ -7837,7 +7863,6 @@ ion-header-bar {
         .main-content #inner .data-container .data-box .data-image {
           width: 180px;
           height: 270px;
-          background-size: 180px 270px;
           object-fit: cover; }
         .main-content #inner .data-container .data-box .data-title {
           height: 50px;
@@ -7851,6 +7876,200 @@ ion-header-bar {
           white-space: normal;
           padding-top: 5px;
           margin: 0; }
-    .main-content #inner .filter-options {
-      border: 1px solid blue;
-      height: 70px; }
+
+.movie-details-modal {
+  width: 100%;
+  left: 0;
+  height: 100%;
+  bottom: 0;
+  overflow: hidden;
+  top: 0; }
+  .movie-details-modal .movie-modal-header {
+    height: 50px;
+    background-color: #3D3C3C !important;
+    color: #ffffff; }
+    .movie-details-modal .movie-modal-header h1 {
+      color: #ffffff;
+      font-size: 23px;
+      line-height: 50px;
+      font-weight: 700; }
+    .movie-details-modal .movie-modal-header button {
+      float: right;
+      position: absolute;
+      right: 20px;
+      color: white;
+      background: none;
+      border: none;
+      font-size: 29px;
+      top: 2px; }
+  .movie-details-modal .movie-modal-content {
+    background-size: contain !important; }
+    .movie-details-modal .movie-modal-content .details-wrapper {
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.4); }
+      .movie-details-modal .movie-modal-content .details-wrapper .trailer-box {
+        height: 25px;
+        margin-top: 40px;
+        padding: 0px 10px 0px 20px;
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+        .movie-details-modal .movie-modal-content .details-wrapper .trailer-box iframe {
+          height: 480px;
+          width: 100%;
+          margin-top: 20px; }
+        .movie-details-modal .movie-modal-content .details-wrapper .trailer-box .trailers-list a {
+          font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+          font-size: 22px;
+          color: #ffffff;
+          margin-left: 10px;
+          text-decoration: underline; }
+        .movie-details-modal .movie-modal-content .details-wrapper .trailer-box .trailers-list a.active {
+          color: #289FC3; }
+      .movie-details-modal .movie-modal-content .details-wrapper .trailer-box.active {
+        height: 535px; }
+      .movie-details-modal .movie-modal-content .details-wrapper .info-box {
+        padding: 35px 20px 20px 30px;
+        overflow: hidden; }
+        .movie-details-modal .movie-modal-content .details-wrapper .info-box .poster-wrapper {
+          width: 250px;
+          float: left; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .poster-wrapper .poster {
+            width: 250px;
+            height: 375px;
+            object-fit: cover; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .poster-wrapper .trailer {
+            margin-top: 10px;
+            width: 250px;
+            height: 60px;
+            background-color: #289FC3;
+            color: #ffffff;
+            font-size: 25px;
+            /* font-weight: 700; */
+            border: none;
+            border-radius: 7px; }
+        .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info {
+          float: left;
+          margin-left: 30px;
+          width: 70%; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info h1 {
+            color: #fff;
+            height: 45px; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section {
+            display: block;
+            overflow: hidden; }
+            .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div {
+              float: left;
+              margin-right: 25px; }
+              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p {
+                color: #fff;
+                line-height: 31px;
+                font-size: 21px;
+                margin: 0;
+                font-weight: 500; }
+              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p.rating, .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p.release-date, .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p.runtime {
+                line-height: 34px;
+                font-size: 25px;
+                font-weight: 700; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info p.tagline {
+            line-height: 30px;
+            color: white;
+            margin-top: 10px;
+            font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+            font-size: 1.5em;
+            font-style: italic;
+            padding-bottom: .25em;
+            text-shadow: 0 0 1px #FFF; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info p.synopsis {
+            color: #fff;
+            line-height: 30px;
+            font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+            font-size: 1.5em;
+            padding-bottom: .25em;
+            text-shadow: 0 0 1px #FFF;
+            margin-top: 15px; }
+      .movie-details-modal .movie-modal-content .details-wrapper .similar-box {
+        padding: 0px 0px 20px 30px;
+        overflow: hidden; }
+        .movie-details-modal .movie-modal-content .details-wrapper .similar-box h1 {
+          margin: 0;
+          font-size: 20px;
+          color: white;
+          text-transform: uppercase;
+          line-height: 39px;
+          font-weight: 700; }
+        .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container {
+          padding: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          overflow-x: scroll;
+          height: 325px;
+          margin-top: 10px; }
+          .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box.active {
+            background-color: #0b1b2d;
+            border: 1px solid #253446;
+            width: 800px !important;
+            padding: 20px !important; }
+          .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box {
+            width: 180px;
+            height: 320px;
+            display: inline-block;
+            margin-right: 10px;
+            overflow: hidden;
+            padding: 0; }
+            .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .left {
+              width: 204px;
+              float: left;
+              position: relative; }
+            .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .right {
+              width: 534px;
+              height: 305px;
+              float: left;
+              margin-left: 20px; }
+              .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .right iframe {
+                width: 100%;
+                float: left;
+                height: 100%; }
+              .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .right .cast {
+                width: 100%;
+                height: 65px;
+                color: #D7D5D6;
+                line-height: 25px;
+                font-size: 18px;
+                text-align: center;
+                word-wrap: break-word;
+                overflow: hidden;
+                white-space: normal;
+                padding-top: 10px;
+                margin: 0; }
+                .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .right .cast span {
+                  font-weight: 700; }
+            .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .data-date {
+              position: absolute;
+              bottom: 80px;
+              background-color: #B62E38;
+              padding: 12px;
+              left: 10px;
+              opacity: 0.9; }
+              .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .data-date p {
+                font-size: 13px;
+                color: white;
+                line-height: 10px;
+                margin: 0;
+                font-weight: 700; }
+            .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .data-image {
+              width: 180px;
+              height: 270px;
+              object-fit: cover; }
+            .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .data-title {
+              height: 50px;
+              width: 180px;
+              color: #D7D5D6;
+              line-height: 21px;
+              font-size: 16px;
+              text-align: center;
+              word-wrap: break-word;
+              overflow: hidden;
+              white-space: normal;
+              padding-top: 5px;
+              margin: 0; }

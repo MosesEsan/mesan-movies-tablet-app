@@ -14,8 +14,8 @@ angular.module('starter', ['ionic', 'ui.router', 'myApp.config', 'angularMoment'
     .run(function($ionicPlatform, $rootScope) {
 
         $rootScope.views = [
-            {name: "Movies", icon: "movie_icon.ico"},
-            {name: "TV", icon: "tv_icon.ico"}];
+            {name: "Movies", icon: "movie_icon.ico", color:"#DCAB34"},
+            {name: "TV", icon: "tv_icon.ico", color: "#D23934"}];
 
 
         $ionicPlatform.ready(function() {
@@ -31,7 +31,6 @@ angular.module('starter', ['ionic', 'ui.router', 'myApp.config', 'angularMoment'
 
         $rootScope.$on('$stateChangeStart',
             function(event, toState, toParams, fromState, fromParams){
-                console.log(toState)
                 $rootScope.currentState = toState.name;
             })
     })
