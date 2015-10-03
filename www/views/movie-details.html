@@ -1,52 +1,71 @@
 <ion-modal-view class="movie-details-modal">
-    <ion-header-bar class="movie-modal-header">
-        <h1 class="title">Movie Detail
-        </h1>
-        <button type="button" class="ion-close-round" ng-click="closeModal()"></button>
-    </ion-header-bar>
-
     <ion-content class="movie-modal-content" style="overflow-y: auto !important;" has-bouncing="true"
                  ng-style="{'background': (selectedMovie.backdrop_path !== null) ? 'url({{IMG_URL+selectedMovie.backdrop_path}})' : 'url({{IMG_URL+selectedMovie.poster_path}})'}">
+        <button type="button" class="ion-close-round close" ng-click="closeModal()"></button>
 
         <div class="details-wrapper">
-            <div class="trailer-box" ng-class="{'active' : trailer_source !== null}" ng-if="selectedMovie.trailers.length > 0">
-                
-                <div class="trailers-list" >
-                    <a ng-repeat="trailer in selectedMovie.trailers" ng-click="watchTrailers($index)" ng-class="{'active' : source === trailer.source}">{{trailer.type}}</a>
-                </div>
+            <!--<div class="trailer-box" ng-class="{'active' : trailer_source !== null}" ng-if="selectedMovie.trailers.length > 0">-->
+                <!-- -->
+                <!--<div class="trailers-list" >-->
+                    <!--<a ng-repeat="trailer in selectedMovie.trailers" ng-click="watchTrailers($index)" ng-class="{'active' : source === trailer.source}">{{trailer.type}}</a>-->
+                <!--</div>-->
 
-                <iframe src="{{trailer_source}}" id="trailer_{{movie.id}}">
-                    <p>Your browser does not support iframes.</p>
-                </iframe>
+                <!--<iframe src="{{trailer_source}}" id="trailer_{{movie.id}}">-->
+                    <!--<p>Your browser does not support iframes.</p>-->
+                <!--</iframe>-->
 
-            </div>
+            <!--</div>-->
 
             <div class="info-box">
                 <div class="poster-wrapper">
                     <img class="poster" ng-src="{{IMG_URL+selectedMovie.poster_path}}"/>
                 </div>
+
                 <section class="movie-info">
                     <h1>{{selectedMovie.title}}</h1>
-                    <section>
-                        <div>
-                            <p>Release Date</p>
-                            <p class="release-date">{{selectedMovie.release_date | amDateFormat:'MMMM Do'}}</p>
-                        </div>
-
-                        <div>
-                            <p>Rating</p>
-                            <p class="rating">{{selectedMovie.rating}}</p>
-                        </div>
-
-                        <div>
-                            <p>Runtime</p>
-                            <p class="runtime">{{selectedMovie.runtime}} mins</p>
-                        </div>
-                    </section>
-
                     <p class="tagline" ng-if="selectedMovie.tagline.length > 0">"{{selectedMovie.tagline}}"</p>
+                    <section class="metadata">
+                        <div>
+                            <i class="ion-ios-calendar-outline"></i>
+                            <p>{{selectedMovie.release_date | amDateFormat:'Do MMMM YYYY'}} ({{selectedMovie.country}})</p>
+                        </div>
 
+                        <div>
+                            <i class="ion-ios-clock-outline"></i>
+                            <p>{{selectedMovie.runtime}} mins<p>
+                        </div>
+
+                        <div><p>{{selectedMovie.rating}}</p> </div>
+                    </section>
+                    <section class="metadata">
+                        <div ng-repeat="genre in selectedMovie.genres"><p>{{genre.name}}</p> </div>
+                    </section>
                     <p class="synopsis">{{selectedMovie.overview}}</p>
+                    <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="cast-crew" disable-side-menu>
+                        <section class="cast-box" ng-repeat="actor in selectedMovie.director">
+                            <h1 ng-if="$index === 0">Director</h1>
+                            <h1 ng-if="$index > 0"></h1>
+                            <img ng-if="actor.profile_path === null" ng-src="img/no_image.png">
+                            <img ng-if="actor.profile_path !== null" ng-src="{{IMG_URL+actor.profile_path}}">
+                            <p>{{actor.name}}</p>
+                        </section>
+
+                        <section class="cast-box" ng-repeat="actor in selectedMovie.writers">
+                            <h1 ng-if="$index === 0">Writers</h1>
+                            <h1 ng-if="$index > 0"></h1>
+                            <img ng-if="actor.profile_path === null" ng-src="img/no_image.png">
+                            <img ng-if="actor.profile_path !== null" ng-src="{{IMG_URL+actor.profile_path}}">
+                            <p>{{actor.name}}</p>
+                        </section>
+
+                        <section class="cast-box" ng-repeat="actor in selectedMovie.cast">
+                            <h1 ng-if="$index === 0">Cast</h1>
+                            <h1 ng-if="$index > 0"></h1>
+                            <img ng-if="actor.profile_path === null" ng-src="img/no_image.png">
+                            <img ng-if="actor.profile_path !== null" ng-src="{{IMG_URL+actor.profile_path}}">
+                            <p>{{actor.name}}</p>
+                        </section>
+                    </ion-scroll>
                 </section>
             </div>
 
@@ -54,7 +73,7 @@
                 <h1>Similar Movies</h1>
                 <ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" has-bouncing="true" class="data-container" disable-side-menu>
                     <div class="data-box" ng-repeat="movie in selectedMovie.similar"
-                         ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}" ng-click="selectMovie(menu.endpoint, $index)">
+                         ng-class="{'active': selectedMovie === movie.id}" id="{{movie.id}}">
                         <section class="left">
                             <!--<section class="data-date"><p>{{movie.release_date | amDateFormat:'MMMM Do'}}</p></section>-->
                             <img class="data-image" ng-src="{{IMG_URL+movie.poster_path}}"/>

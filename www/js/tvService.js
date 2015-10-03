@@ -31,7 +31,7 @@ TVDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, TV_API_URL) {
     this.getData = function(){
         var promises = [];
 
-        for(var i = 0; i < self.menuOptions.length; i++){
+        for(var i = 1; i < self.menuOptions.length; i++){
             var promise = $http({method: 'GET', url: TV_API_URL+self.menuOptions[i].endpoint+'?api_key='+API_KEY, cache: 'true'});
             promises.push(promise);
         }

@@ -36,6 +36,7 @@ angular.module('movies', ['MoviesDataService'])
             $scope.selectedMovieIndex = index;
             $scope.selectedMovieEndpoint = endpoint;
             $scope.selectedMovie = moviesDataService.movies[endpoint][index];
+            console.log($scope.selectedMovie)
 
             $ionicModal.fromTemplateUrl('views/movie-details.html', {
                 scope: $scope,
@@ -46,7 +47,8 @@ angular.module('movies', ['MoviesDataService'])
             });
 
             $scope.closeModal = function () {
-                $scope.modal.hide();
+                $scope.modal.remove();
+
             };
             //Cleanup the modal when we're done with it!
             $scope.$on('$destroy', function () {
@@ -59,13 +61,18 @@ angular.module('movies', ['MoviesDataService'])
             // Execute action on remove modal
             $scope.$on('modal.removed', function () {
                 // Execute action
+                $scope.selectedMovieIndex = null;
+                $scope.selectedMovieEndpoint = null;
+                $scope.selectedMovie = null;
+                $scope.source = null;
+                $scope.trailer_source = null;
             });
         }
 
         $scope.watchTrailers = function(index){
             var selectedMovie = $scope.selectedMovie;
             $scope.source = selectedMovie.trailers[index].source;
-            $scope.trailer_source = $sce.trustAsResourceUrl("http://www.youtube.com/embed/"+$scope.source+"?autoplay=1");
+            $scope.trailer_source = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+$scope.source+"?autoplay=1");
 
 
             console.log($scope.trailer_source)

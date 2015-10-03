@@ -211,41 +211,26 @@ ion-header-bar{
   overflow: hidden;
   top: 0;
 
+  .movie-modal-content{
+    background-size: cover !important;
+    background-repeat: no-repeat;
 
-  .movie-modal-header {
-    height: 50px;
-    background-color: #3D3C3C !important;
-    color: #ffffff;
-
-    h1{
-      color: #ffffff;
-      font-size: 23px;
-      line-height: 50px;
-      font-weight: 700;
-    }
-
-    button{
-      float: right;
+    .close{
+      height: 40px;
+      width: 40px;
       position: absolute;
-      right: 20px;
+      right: 30px;
+      top: 20px;
+      border: none;
       color: white;
       background: none;
       border: none;
-      font-size: 29px;
-      top: 2px;
+      font-size: 33px;
     }
-  }
-
-  //.scroll{
-  //  height: 100%;
-  //}
-
-  .movie-modal-content{
-    background-size: contain !important;
 
     .details-wrapper{
       overflow: hidden;
-      background-color: rgba(0,0,0,0.4);
+      background-color: rgba(0,0,0,0.7);
 
       .trailer-box{
         height: 25px;
@@ -306,47 +291,86 @@ ion-header-bar{
           }
         }
 
+        /* smartphones, iPhone, portrait 480x320 phones*/
+        @media (min-width:320px) { }
+
+        /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. *
+        @media (min-width:481px) { }
+
+        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+        @media (min-width:641px) {
+          .movie-info {
+            width: 60%;
+          }
+        }
+
+        /* tablet, landscape iPad, lo-res laptops and desktops */
+        @media (min-width:961px) {
+          .movie-info {
+            width: 71%;
+          }
+        }
+
+        /* big landscape tablets, laptops, and desktops */
+        @media (min-width:1025px) {
+          .movie-info {
+            width: 71%;
+          }
+        }
+
+        /* hi-res laptops and desktops */
+        @media (min-width:1281px) {
+          .movie-info {
+            width: 71%;
+          }
+        }
+
         .movie-info{
           float: left;
-          margin-left: 30px;
-          width: 70%;
+          margin-left: 25px;
 
           h1{
             color: #fff;
-            height: 45px;
+            width: 90%;
           }
 
-          section{
+          .metadata{
             display: block;
             overflow: hidden;
 
             div{
               float: left;
-              margin-right: 25px;
-              p{
-                color: #fff;
-                line-height: 31px;
-                font-size: 21px;
-                margin: 0;
-                font-weight: 500;
+              margin-right: 15px;
+              border-right: 2px solid rgb(122,125, 131);
+              padding-right: 20px;
+
+              i{
+                font-size: 17px;
+                height: 30px;
+                display: block;
+                float: left;
+                margin-top: 7px;
+                margin-right: 8px;
+                color: white;
               }
 
-              p.rating,
-              p.release-date,
-              p.runtime{
-                line-height: 34px;
-                font-size: 25px;
-                font-weight: 700;
+              p{
+                color: #fff;
+                line-height: 35px;
+                font-size: 16px;
+                margin: 0;
+                font-weight: 400;
+                float: left;
               }
             }
           }
 
           p.tagline{
-            line-height: 30px;
+            line-height: 20px;
             color: white;
             margin-top: 10px;
             font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-style: italic;
             padding-bottom: .25em;
             text-shadow: 0 0 1px #FFF;
@@ -354,12 +378,59 @@ ion-header-bar{
 
           p.synopsis{
             color: #fff;
-            line-height: 30px;
+            line-height: 27px;
             font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
-            font-size: 1.5em;
+            font-size: 19px;
             padding-bottom: .25em;
             text-shadow: 0 0 1px #FFF;
             margin-top: 15px;
+            margin-bottom: 30px;
+          }
+
+          .cast-crew{
+            overflow: hidden;
+            white-space: nowrap;
+            overflow-x: scroll;
+
+            .cast-box{
+              width: 100px;
+              overflow: hidden;
+              display: inline-block;
+              margin-right: 8px;
+
+              h1{
+                text-align: center;
+                line-height: 27px;
+                font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+                font-size: 19px;
+                color: #FFFFFF;
+                height: 30px;
+              }
+
+              img{
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-left: 15px;
+              }
+
+
+              p{
+                text-align: center;
+                line-height: 21px;
+                font-size: 18px;
+                font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+                color: #FFFFFF;
+                height: 60px;
+                word-wrap: break-word;
+                overflow: hidden;
+                white-space: normal;
+                margin: 0;
+                margin-top: 3px;
+              }
+
+            }
           }
         }
       }
@@ -384,13 +455,6 @@ ion-header-bar{
           overflow-x: scroll;
           height: 325px;
           margin-top: 10px;
-
-          .data-box.active {
-            background-color: #0b1b2d;
-            border: 1px solid #253446;
-            width: 800px !important;
-            padding: 20px!important;
-          }
 
           .data-box{
             width: 180px;
@@ -462,7 +526,7 @@ ion-header-bar{
             .data-title{
               height: 50px;
               width: 180px;
-              color: #D7D5D6;
+              color: #ffffff;
               line-height: 21px;
               font-size: 16px;
               text-align: center;

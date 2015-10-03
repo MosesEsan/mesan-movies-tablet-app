@@ -9,7 +9,7 @@
 
                         <section class="left">
                             <!--<section class="data-date"><p>{{tvShow.first_air_date | amDateFormat:'MMMM Do'}}</p></section>-->
-                            <section class="data-image" style="background-image: url({{IMG_URL+tvShow.poster_path}})"></section>
+                            <img class="data-image" ng-src="{{IMG_URL+tvShow.poster_path}}"/>
                             <p class="data-title">{{tvShow.name}}</p>
                         </section>
                     </div>

@@ -7884,29 +7884,23 @@ ion-header-bar {
   bottom: 0;
   overflow: hidden;
   top: 0; }
-  .movie-details-modal .movie-modal-header {
-    height: 50px;
-    background-color: #3D3C3C !important;
-    color: #ffffff; }
-    .movie-details-modal .movie-modal-header h1 {
-      color: #ffffff;
-      font-size: 23px;
-      line-height: 50px;
-      font-weight: 700; }
-    .movie-details-modal .movie-modal-header button {
-      float: right;
+  .movie-details-modal .movie-modal-content {
+    background-size: cover !important;
+    background-repeat: no-repeat; }
+    .movie-details-modal .movie-modal-content .close {
+      height: 40px;
+      width: 40px;
       position: absolute;
-      right: 20px;
+      right: 30px;
+      top: 20px;
+      border: none;
       color: white;
       background: none;
       border: none;
-      font-size: 29px;
-      top: 2px; }
-  .movie-details-modal .movie-modal-content {
-    background-size: contain !important; }
+      font-size: 33px; }
     .movie-details-modal .movie-modal-content .details-wrapper {
       overflow: hidden;
-      background-color: rgba(0, 0, 0, 0.4); }
+      background-color: rgba(0, 0, 0, 0.7); }
       .movie-details-modal .movie-modal-content .details-wrapper .trailer-box {
         height: 25px;
         margin-top: 40px;
@@ -7930,7 +7924,15 @@ ion-header-bar {
         height: 535px; }
       .movie-details-modal .movie-modal-content .details-wrapper .info-box {
         padding: 35px 20px 20px 30px;
-        overflow: hidden; }
+        overflow: hidden;
+        /* smartphones, iPhone, portrait 480x320 phones*/
+        /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. *
+        @media (min-width:481px) { }
+
+        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+        /* tablet, landscape iPad, lo-res laptops and desktops */
+        /* big landscape tablets, laptops, and desktops */
+        /* hi-res laptops and desktops */ }
         .movie-details-modal .movie-modal-content .details-wrapper .info-box .poster-wrapper {
           width: 250px;
           float: left; }
@@ -7948,46 +7950,99 @@ ion-header-bar {
             /* font-weight: 700; */
             border: none;
             border-radius: 7px; }
+        @media (min-width: 641px) {
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info {
+            width: 60%; } }
+        @media (min-width: 961px) {
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info {
+            width: 71%; } }
+        @media (min-width: 1025px) {
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info {
+            width: 71%; } }
+        @media (min-width: 1281px) {
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info {
+            width: 71%; } }
         .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info {
           float: left;
-          margin-left: 30px;
-          width: 70%; }
+          margin-left: 25px; }
           .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info h1 {
             color: #fff;
-            height: 45px; }
-          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section {
+            width: 90%; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .metadata {
             display: block;
             overflow: hidden; }
-            .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div {
+            .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .metadata div {
               float: left;
-              margin-right: 25px; }
-              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p {
+              margin-right: 15px;
+              border-right: 2px solid #7a7d83;
+              padding-right: 20px; }
+              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .metadata div i {
+                font-size: 17px;
+                height: 30px;
+                display: block;
+                float: left;
+                margin-top: 7px;
+                margin-right: 8px;
+                color: white; }
+              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .metadata div p {
                 color: #fff;
-                line-height: 31px;
-                font-size: 21px;
+                line-height: 35px;
+                font-size: 16px;
                 margin: 0;
-                font-weight: 500; }
-              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p.rating, .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p.release-date, .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info section div p.runtime {
-                line-height: 34px;
-                font-size: 25px;
-                font-weight: 700; }
+                font-weight: 400;
+                float: left; }
           .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info p.tagline {
-            line-height: 30px;
+            line-height: 20px;
             color: white;
             margin-top: 10px;
             font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-style: italic;
             padding-bottom: .25em;
             text-shadow: 0 0 1px #FFF; }
           .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info p.synopsis {
             color: #fff;
-            line-height: 30px;
+            line-height: 27px;
             font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
-            font-size: 1.5em;
+            font-size: 19px;
             padding-bottom: .25em;
             text-shadow: 0 0 1px #FFF;
-            margin-top: 15px; }
+            margin-top: 15px;
+            margin-bottom: 30px; }
+          .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .cast-crew {
+            overflow: hidden;
+            white-space: nowrap;
+            overflow-x: scroll; }
+            .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .cast-crew .cast-box {
+              width: 100px;
+              overflow: hidden;
+              display: inline-block;
+              margin-right: 8px; }
+              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .cast-crew .cast-box h1 {
+                text-align: center;
+                line-height: 27px;
+                font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+                font-size: 19px;
+                color: #FFFFFF;
+                height: 30px; }
+              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .cast-crew .cast-box img {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-left: 15px; }
+              .movie-details-modal .movie-modal-content .details-wrapper .info-box .movie-info .cast-crew .cast-box p {
+                text-align: center;
+                line-height: 21px;
+                font-size: 18px;
+                font-family: Georgia,"Times New Roman","Century Schoolbook L",serif;
+                color: #FFFFFF;
+                height: 60px;
+                word-wrap: break-word;
+                overflow: hidden;
+                white-space: normal;
+                margin: 0;
+                margin-top: 3px; }
       .movie-details-modal .movie-modal-content .details-wrapper .similar-box {
         padding: 0px 0px 20px 30px;
         overflow: hidden; }
@@ -8005,11 +8060,6 @@ ion-header-bar {
           overflow-x: scroll;
           height: 325px;
           margin-top: 10px; }
-          .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box.active {
-            background-color: #0b1b2d;
-            border: 1px solid #253446;
-            width: 800px !important;
-            padding: 20px !important; }
           .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box {
             width: 180px;
             height: 320px;
@@ -8064,7 +8114,7 @@ ion-header-bar {
             .movie-details-modal .movie-modal-content .details-wrapper .similar-box .data-container .data-box .data-title {
               height: 50px;
               width: 180px;
-              color: #D7D5D6;
+              color: #ffffff;
               line-height: 21px;
               font-size: 16px;
               text-align: center;

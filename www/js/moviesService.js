@@ -9,8 +9,6 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
     this.categories = [];
     this.menuOptions = [];
 
-    console.log()
-
     $http.get('data.json').success(function (data){
         self.menuOptions = data["Movies"];
         self.categories = data["Movies"].clone();
@@ -59,7 +57,6 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
         var deferred2 = $q.defer();// deferred contains the promise to be returned
         var movieID = self.movies[endpoint][index].id;
 
-        console.log(movieID)
         $http.get(MOVIES_API_URL+movieID+'?api_key='+API_KEY+'&append_to_response=releases,trailers,credits,similar')
 
             .then(function(response) {
@@ -71,6 +68,7 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
                     var trailers = response.data.trailers;
                     self.movies[endpoint][index]["homepage"] = response.data.homepage;
                     self.movies[endpoint][index]["tagline"] = response.data.tagline;
+                    self.movies[endpoint][index]["genres"] = response.data.genres;
                     self.movies[endpoint][index]["runtime"] = response.data.runtime;
                     self.movies[endpoint][index]["cast"] = response.data.credits.cast;
                     self.movies[endpoint][index]["crew"] = response.data.credits.crew;
@@ -80,9 +78,22 @@ MovieDBAPI = function ($http, $q, $localStorage, $rootScope, API_KEY, MOVIES_API
                     self.movies[endpoint][index]["production_companies"] = response.data.production_companies;
                     self.movies[endpoint][index]["rating"] = (countries[0].certification === "") ? "N/A" : (countries[0].certification);
 
-                    //update local data
 
-                    console.log(self.movies[endpoint][index]["similar"])
+                    for (var i =0; i < response.data.credits.crew.length; i++){
+                        var crew = response.data.credits.crew[i];
+
+                        var directors = [];
+                        var writers = [];
+
+                        if (crew.job === "Director") directors.push(crew)
+                        else if (crew.department === "Writing") writers.push(crew);
+
+                        if (directors.length > 0) self.movies[endpoint][index]["director"] = directors;
+                        if (writers.length > 0) self.movies[endpoint][index]["writers"] = writers;
+                    }
+
+                    console.log(self.movies[endpoint][index])
+                    //update local data
                 } else {
                     // invalid response
                     deferred2.reject(response.data);
